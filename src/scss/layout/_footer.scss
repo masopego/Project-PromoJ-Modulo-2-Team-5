@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid 1px $color-medium;
+  &__copy {
+    font-size: $font-small;
+    font-family: $font-main;
+    color: $color-medium-dark; //no es realmente el color, hay que crear una variable con #6b6b6b
+    margin-top: rem(18);
+  }
+  &__logo {
+    width: rem(103);
+    height: rem(40);
+    margin-bottom: rem(20);
+    margin-top: rem(12);
+    img {
+      width: 100%;
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    &__copy {
+      margin: rem(18) 0 rem(22) rem(41);
+    }
+    &__logo {
+      margin: rem(10) rem(40) rem(10) 0;
+    }
+  }
+}
