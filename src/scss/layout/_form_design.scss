@@ -1,0 +1,49 @@
+.palette-cold span,
+.palette-warm span,
+.palette-medium span {
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+}
+// .cold,
+// .warm,
+// .medium {
+//   display: block;
+//   width: 100%;
+// }
+.palette-cold {
+  display: inline-block;
+  .a {
+    background-color: $palette-cold-a;
+  }
+  .b {
+    background-color: $palette-cold-b;
+  }
+  .c {
+    background-color: $palette-cold-c;
+  }
+}
+.palette-warm {
+  display: inline-block;
+  .a {
+    background-color: $palette-warm-a;
+  }
+  .b {
+    background-color: $palette-warm-b;
+  }
+  .c {
+    background-color: $palette-warm-c;
+  }
+}
+.palette-medium {
+  display: inline-block;
+  .a {
+    background-color: $palette-medium-a;
+  }
+  .b {
+    background-color: $palette-medium-b;
+  }
+  .c {
+    background-color: $palette-medium-c;
+  }
+}
