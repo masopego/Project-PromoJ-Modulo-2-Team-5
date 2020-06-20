@@ -1,19 +1,17 @@
 <section class="page__form">
-
-
-	<form action="#" method="post"></form>
-	<fieldset>
-		<include src="./design.html"></include>
-	</fieldset>
-	<fieldset>
-		<include src="./fill.html"></include>
-	</fieldset>
-	<fieldset>
-		<h2><i class="fas fa-share-alt"></i>Comparte </h2>
-		<div>
-			<input type="submit" value="Crear tarjeta" />
-			<!--ICONO COMO BACKGROUND DEL DIV-->
-		</div>
-	</fieldset>
+	<form action="/signup" method="post">
+		<fieldset class="form__design">
+			<include src="./design.html"></include>
+		</fieldset>
+		<fieldset class="form__fill">
+			<include src="./fill.html"></include>
+		</fieldset>
+		<fieldset class="form__share">
+			<h2><i class="fas fa-share-alt"></i>Comparte </h2>
+			<div>
+				<input type="submit" value="Crear tarjeta" />
+				<!--ICONO COMO BACKGROUND DEL DIV-->
+			</div>
+		</fieldset>
 	</form>
 </section>

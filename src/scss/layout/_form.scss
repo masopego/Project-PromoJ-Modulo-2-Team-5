@@ -1,10 +1,14 @@
-.palette-cold {
+.palette-cold span,
+.palette-warm span,
+.palette-medium span {
+  display: inline-block;
   width: 30px;
   height: 25px;
+}
+
+.palette-cold {
   .a {
     background-color: $palette-cold-a;
-    width: 30px;
-    height: 25px;
   }
   .b {
     background-color: $palette-cold-b;
