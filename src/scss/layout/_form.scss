@@ -1,0 +1,41 @@
+.palette-cold {
+  width: 30px;
+  height: 25px;
+  .a {
+    background-color: $palette-cold-a;
+    width: 30px;
+    height: 25px;
+  }
+  .b {
+    background-color: $palette-cold-b;
+  }
+  .c {
+    background-color: $palette-cold-c;
+  }
+}
+.palette-warm {
+  width: 30px;
+  height: 25px;
+  .a {
+    background-color: $palette-warm-a;
+  }
+  .b {
+    background-color: $palette-warm-b;
+  }
+  .c {
+    background-color: $palette-warm-c;
+  }
+}
+.palette-medium {
+  width: 30px;
+  height: 25px;
+  .a {
+    background-color: $palette-medium-a;
+  }
+  .b {
+    background-color: $palette-medium-b;
+  }
+  .c {
+    background-color: $palette-medium-c;
+  }
+}
