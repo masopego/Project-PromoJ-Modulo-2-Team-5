@@ -2,13 +2,21 @@
   display: flex;
   flex-direction: column;
   color: $color-secondary;
-  font-family: $fon-main;
+  font-family: $font-main;
 
   h2 {
     text-transform: uppercase;
     color: $color-medium-dark;
     font-size: 18px;
     font-weight: 600;
+  }
+
+  .box {
+    border: 1px solid $color-quaternary;
+  }
+
+  .label {
+    font-size: 14px;
   }
 }
 
