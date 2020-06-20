@@ -360,3 +360,7 @@ template {
   -moz-appearance: none;
   appearance: none;
 }
+
+input {
+  -webkit-appearance: checkbox;
+}
