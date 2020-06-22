@@ -1,7 +1,10 @@
 .header {
-  padding-left: rem(40);
-  padding-top: rem(30);
-  padding-bottom: rem(30);
+  .wrapper {
+    padding-left: rem(40);
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+  }
+
   h1 {
     width: rem(201);
     height: rem(51);
