@@ -18,17 +18,17 @@
   .label {
     font-size: 14px;
   }
-}
 
-.fa,
-.fas {
-  font-weight: 900;
-  font-size: 8px;
-  transform: translate(0, -70%);
-}
-.fa,
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-  color: $color-main;
+  .fa,
+  .fas {
+    font-weight: 900;
+    font-size: 8px;
+    transform: translate(0, -70%);
+  }
+  .fa,
+  .far,
+  .fas {
+    font-family: "Font Awesome 5 Free";
+    color: $color-main;
+  }
 }
