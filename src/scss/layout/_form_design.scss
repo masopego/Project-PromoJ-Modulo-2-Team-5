@@ -1,16 +1,19 @@
-.form__design h2 {
+.form__design__title {
   text-transform: uppercase;
   color: $color-medium-dark;
-  font-size: $font-medium;
+  font-size: rem(18);
   font-weight: 600;
-  font-family: $font-main;
   display: flex;
   justify-content: space-between;
-  i {
-    font-weight: normal;
-    font-size: $font-medium;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  .fa-object-ungroup {
     color: $color-main;
-    margin-right: rem(10);
+    margin-right: rem;
+  }
+  .fa-chevron-down {
+    color: $color-medium-dark;
   }
 }
 fieldset {

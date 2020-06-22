@@ -5,24 +5,22 @@
   border-bottom: 2px solid $color-medium;
 }
 
-.form__share h2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form__share h2 span {
+.form__share__title {
   text-transform: uppercase;
   color: $color-medium-dark;
-  font-size: $font-medium;
+  font-size: rem(18);
   font-weight: 600;
-  font-family: $font-main;
   display: flex;
   justify-content: space-between;
-  i {
-    font-weight: normal;
-    font-size: $font-medium;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  .fa-share-alt {
     color: $color-main;
     margin-right: rem(10);
+  }
+  .fa-chevron-down {
+    color: $color-medium-dark;
   }
 }
 .form__share__submit {
