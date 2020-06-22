@@ -1,0 +1,70 @@
+.app__preview {
+  background-color: #dde9ed;
+  padding: 40px 0;
+  .button-container {
+    width: 240px;
+    margin: auto;
+    padding-bottom: 20px;
+    .button__reset {
+      border: 1px solid $color-light;
+      border-radius: 15px;
+      padding: 7px;
+      background-color: transparent;
+      color: $color-medium-dark;
+      font-size: rem(12);
+      span {
+        display: inline-block;
+        margin-left: 5px;
+        text-transform: uppercase;
+        font-family: $font-main;
+      }
+    }
+  }
+  &--card {
+    margin: auto;
+    width: 240px;
+    height: 330px;
+    background-color: $color-light;
+    box-shadow: 0 0 5px $color-medium-dark;
+    .top-block {
+      padding: 20px 0 10px;
+      .name_job {
+        line-height: 1.25;
+        border-left: 5px solid $color-tertiary;
+        font-family: $font-card;
+        padding-left: 15px;
+
+        .full_name {
+          font-size: rem(18);
+          color: $color-secondary;
+        }
+        .job {
+          margin-top: 4px;
+          font-size: rem(16);
+          color: $color-medium-dark;
+        }
+      }
+    }
+    .photo {
+      height: 200px;
+      width: 240px;
+      background-image: url("http://placekitten.com/400/200");
+      background-size: cover;
+    }
+    .social_media {
+      display: flex;
+      margin-left: 20px;
+      padding: 10px 0 12px;
+      li {
+        color: $color-secondary;
+        border: $color-quaternary 2px solid;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

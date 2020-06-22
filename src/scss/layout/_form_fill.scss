@@ -46,17 +46,17 @@
     margin-bottom: 20px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   }
-}
 
-.fa,
-.fas {
-  font-weight: 900;
-  font-size: 8px;
-  transform: translate(0, -70%);
-}
-.fa,
-.far,
-.fas {
-  font-family: "Font Awesome 5 Free";
-  color: $color-main;
+  .fa,
+  .fas {
+    font-weight: 900;
+    font-size: 8px;
+    transform: translate(0, -70%);
+  }
+  .fa,
+  .far,
+  .fas {
+    font-family: "Font Awesome 5 Free";
+    color: $color-main;
+  }
 }
