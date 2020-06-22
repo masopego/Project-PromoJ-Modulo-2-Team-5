@@ -1,2 +1,25 @@
 @import "layout/_form_design.scss";
 @import "layout/_form_fill.scss";
+
+.border {
+  border-bottom: 2px solid $color-medium;
+}
+
+.form__share__submit {
+  margin-top: rem(30);
+  padding-bottom: rem(30);
+  display: flex;
+  justify-content: center;
+  input {
+    width: rem(199);
+    height: rem(50);
+    background-color: $color-main;
+    border-radius: 12px;
+    border-color: $color-main;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    font-family: $font-main;
+    font-size: $font-medium;
+    color: $color-light;
+    text-transform: uppercase;
+  }
+}

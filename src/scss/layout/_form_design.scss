@@ -1,54 +1,85 @@
-.design__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100%;
-  h3 {
-    grid-column: 1 / 2;
-  }
-  .design__container__options {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 10% 20% 10% 20% 10% 20% 10%;
+h2 {
+  text-transform: uppercase;
+  color: $color-medium-dark;
+  font-size: $font-medium;
+  font-weight: 600;
+  font-family: $font-main;
+
+  i {
+    font-weight: normal;
+    font-size: $font-medium;
+    color: $color-main;
+    margin-right: rem(10);
   }
 }
-
-.cold {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  display: block;
+fieldset {
+  border: none;
+}
+.design__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem(22);
+}
+.design__container__colors {
+  height: 100%;
+  display: inline-block;
+  width: 49%;
+  h3 {
+    color: $color-medium-dark;
+    text-transform: uppercase;
+    font-size: $font-small;
+    font-weight: normal;
+  }
+}
+.design__container__options {
+  width: rem(120);
+  display: inline-block;
+  text-align: end;
 }
 .warm {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  display: block;
-}
-.medium {
-  grid-column: 1 / 2;
-  grid-row: 6 / 7;
-  display: block;
+  margin-top: rem(20);
+  margin-bottom: rem(20);
 }
 
+.medium {
+  margin-bottom: rem(30);
+}
+
+.cold,
+.warm,
+.medium {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .palette-cold,
+  .palette-warm,
+  .palette-medium {
+    display: flex;
+    flex-direction: flex-end;
+    border: 1px solid blue;
+  }
+}
 .palette-cold span,
 .palette-warm span,
 .palette-medium span {
   display: inline-block;
   width: 30px;
   height: 25px;
+  margin: 0;
 }
-.palette-cold {
-  grid-column: 2 / 3;
+.a {
+  background-color: $palette-cold-a;
+}
+.b {
+  background-color: $palette-cold-b;
+}
+.c {
+  background-color: $palette-cold-c;
+}
 
-  .a {
-    background-color: $palette-cold-a;
-  }
-  .b {
-    background-color: $palette-cold-b;
-  }
-  .c {
-    background-color: $palette-cold-c;
-  }
-}
 .palette-warm {
   grid-column: 2 / 3;
   .a {
