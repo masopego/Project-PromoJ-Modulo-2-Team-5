@@ -4,23 +4,55 @@
   color: $color-secondary;
   font-family: $font-main;
 
-  h2 {
+  .fill-title {
     text-transform: uppercase;
     color: $color-medium-dark;
     font-size: 18px;
     font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+    .fa-chevron-down {
+      color: $color-medium-dark;
+      font-size: 18px;
+    }
   }
 
   .box {
     border: 1px solid $color-quaternary;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    width: 100%;
+    height: 30px;
+    font-family: $font-main;
+    font-size: 14px;
+    color: $color-fifth;
+    padding-left: 10px;
   }
 
   .label {
     font-size: 14px;
   }
 
-  .fa,
-  .fas {
+  .button {
+    background-color: $color-main;
+    color: $color-light;
+    font-size: 14px;
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-family: $font-main;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    display: block;
+    margin-top: 7px;
+  }
+
+  .fa-asterisk {
     font-weight: 900;
     font-size: 8px;
     transform: translate(0, -70%);
