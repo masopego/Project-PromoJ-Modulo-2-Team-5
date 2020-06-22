@@ -6,7 +6,7 @@
   &__copy {
     font-size: $font-small;
     font-family: $font-main;
-    color: $color-medium-dark; //no es realmente el color, hay que crear una variable con #6b6b6b
+    color: $color-darkened;
     margin-top: rem(18);
   }
   &__logo {
