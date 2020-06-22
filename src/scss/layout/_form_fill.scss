@@ -9,14 +9,42 @@
     color: $color-medium-dark;
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 10px;
+
+    .fas .fa-chevron-down {
+      color: $color-medium-dark;
+      font-size: 18px;
+    }
   }
 
   .box {
     border: 1px solid $color-quaternary;
+    margin-bottom: 20px;
+    width: 329px;
+    height: 30px;
+    font-family: $font-main;
+    font-size: 14px;
+    color: $color-fifth;
+    padding-left: 10px;
   }
 
   .label {
     font-size: 14px;
+    padding-bottom: 7px;
+  }
+
+  .button {
+    background-color: $color-main;
+    color: $color-light;
+    font-size: 14px;
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-family: $font-main;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   }
 }
 
