@@ -10,6 +10,11 @@
     align-items: center;
     padding-left: rem(25.6);
     padding-right: rem(26.4);
+
+    @include tablet {
+      padding-left: rem(175);
+      padding-right: rem(175);
+    }
   }
   &--title {
     width: 250px;
