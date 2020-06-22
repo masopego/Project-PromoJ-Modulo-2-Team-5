@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create your awsome profile card</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <script src="https://kit.fontawesome.com/c75582e3c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <h1>
+        <a href="./index.html" tittle="Go to landing page"
+          ><img src="./assets/images/logo-awesome-profile-cards.svg"
+        /></a>
+      </h1>
+    </div>
+  </header>
+
+  <main class="app__main">
+    <div class="wrapper">
+      <section class="app__preview">
+        <div class="button-container">
+          <button class="button__reset">
+            <i class="far fa-trash-alt"></i><span>reset</span>
+          </button>
+        </div>
+        <div class="app__preview--card">
+          <div class="top-block">
+            <div class="name_job">
+              <h3 class="full_name">Jane Doe</h3>
+              <h4 class="job">FrontEnd Dev</h4>
+            </div>
+          </div>
+          <div class="photo"></div>
+          <ul class="social_media">
+            <li class="phone"><i class="fas fa-mobile-alt"></i></li>
+            <li class="email"><i class="far fa-envelope"></i></li>
+            <li class="linkedin"><i class="fab fa-linkedin-in"></i></li>
+            <li class="github"><i class="fab fa-github-alt"></i></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page__form">
+      	<form action="/signup" method="post">
+      		<fieldset class="form__design">
+      			<h2><i class="far fa-object-ungroup"></i>Diseña</h2>
+			      <!--recuerda ponerlo en mayúscula-->
+			      <div class="design__container border">
+			        <div class="design__container__colors">
+			          <h3>Colores</h3>
+			        </div>
+			        <div class="design__container__options">
+			          <label for="cold" class="cold">
+			            <input type="radio" id="cold" name="colors" value="warmcolor" value="warmcolor" checked="" />
+			            <div class="palette-cold">
+			              <span class="a"></span>
+			              <span class="b"></span>
+			              <span class="c"></span>
+			            </div>
+			          </label>
+			          <label for="warm" class="warm">
+			            <input id="warm" type="radio" name="colors" value="coldcolor" checked="" />
+			            <div class=" palette-warm">
+			              <span class="a"></span>
+			              <span class="b"></span>
+			              <span class="c"></span>
+			            </div>
+			          </label>
+			          <label for="medium" class="medium">
+			            <input id="medium" type="radio" name="colors" value="midiumcolor" checked="" />
+			            <div class="palette-medium">
+			              <span class="a"></span>
+			              <span class="b"></span>
+			              <span class="c"></span>
+			            </div>
+			          </label>
+			        </div>
+			      </div>
+      		</fieldset>
+      		<fieldset class="form__fill">
+      			<div class="border">
+			        <h2 class="fill-title">
+			          <span><i class="far fa-keyboard"></i> rellena</span>
+			          <span><i class="fas fa-chevron-down"></i></span>
+			        </h2>
+			        <label class="label" for="name"
+			          >Nombre completo<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input
+			          class="box"
+			          type="text"
+			          id="name"
+			          name="name"
+			          placeholder="Ej: Sally Hill"
+			          required
+			        />
+			        <label class="label" for="job"
+			          >Puesto<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input
+			          class="box"
+			          type="text"
+			          id="job"
+			          name="job"
+			          placeholder="Ej: Front-End unicorn"
+			          required
+			        />
+			        <label class="label" for="image"
+			          >Imagen de perfil<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input class="button" type="submit" value="Añadir imagen" />
+			        <label class="label" for="email"
+			          >Email<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input
+			          class="box"
+			          type="email"
+			          id="email"
+			          name="email"
+			          placeholder="Ej: sally-hill@gmail.com"
+			          required
+			        />
+			        <label class="label" for="phone">Teléfono</label>
+			        <input
+			          class="box"
+			          type="tel"
+			          id="phone"
+			          name="phone"
+			          placeholder="Ej: 555-55-55-55"
+			        />
+			        <label class="label" for="linkedin"
+			          >Linkedin<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input
+			          class="box"
+			          type="text"
+			          id="linkedin"
+			          name="linkedin"
+			          placeholder="sally-hill"
+			          required
+			        />
+			        <label class="label" for="github"
+			          >Github<i class="fas fa-asterisk" aria-hidden="true"></i
+			        ></label>
+			        <input
+			          class="box"
+			          type="text"
+			          id="github"
+			          name="github"
+			          placeholder="sally-hill"
+			          required
+			        />
+			      </div>
+
+      		</fieldset>
+
+      		<fieldset class="form__share">
+      			<h2><i class="fas fa-share-alt"></i>Comparte </h2>
+      			<div class="form__share__submit border">
+      				<input type="submit" value="Crear tarjeta" />
+      				<!--ICONO COMO BACKGROUND DEL DIV-->
+      			</div>
+      		</fieldset>
+      	</form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <small class="footer__copy">Awesome profile-cards @2018</small>
+      <a class="footer__logo" href="https://adalab.es/"
+        ><img src="./assets/images/logo-adalab.png"
+      /></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
