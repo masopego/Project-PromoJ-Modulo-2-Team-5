@@ -23,12 +23,19 @@
     color: $color-medium-dark;
   }
 }
-.form__share__submit {
-  margin-top: rem(30);
-  padding-bottom: rem(30);
+
+.form__share__button {
   display: flex;
   justify-content: center;
-  input {
+  align-items: center;
+  width: 100%;
+  align-self: center;
+
+  .form__share__submit {
+    margin-bottom: rem(30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: rem(199);
     height: rem(50);
     background-color: $color-main;
@@ -39,5 +46,8 @@
     font-size: $font-medium;
     color: $color-light;
     text-transform: uppercase;
+    i {
+      margin-right: rem(12);
+    }
   }
 }
