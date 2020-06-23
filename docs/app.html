@@ -49,15 +49,15 @@
       <section class="page__form">
       	<form action="/signup" method="post">
       		<fieldset class="form__design">
-      			<h2><i class="far fa-object-ungroup"></i>Diseña</h2>
-			      <!--recuerda ponerlo en mayúscula-->
+      			<h2 class="form__design__title">
+			        <span><i class="far fa-object-ungroup"></i>Diseña</span><span><i class="fas fa-chevron-down"></i></span></h2>
 			      <div class="design__container border">
 			        <div class="design__container__colors">
 			          <h3>Colores</h3>
 			        </div>
 			        <div class="design__container__options">
 			          <label for="cold" class="cold">
-			            <input type="radio" id="cold" name="colors" value="warmcolor" value="warmcolor" checked="" />
+			            <input type="radio" id="cold" name="colors" value="warmcolor" value="warmcolor" checked />
 			            <div class="palette-cold">
 			              <span class="a"></span>
 			              <span class="b"></span>
@@ -65,7 +65,7 @@
 			            </div>
 			          </label>
 			          <label for="warm" class="warm">
-			            <input id="warm" type="radio" name="colors" value="coldcolor" checked="" />
+			            <input id="warm" type="radio" name="colors" value="coldcolor" />
 			            <div class=" palette-warm">
 			              <span class="a"></span>
 			              <span class="b"></span>
@@ -73,7 +73,7 @@
 			            </div>
 			          </label>
 			          <label for="medium" class="medium">
-			            <input id="medium" type="radio" name="colors" value="midiumcolor" checked="" />
+			            <input id="medium" type="radio" name="colors" value="midiumcolor" />
 			            <div class="palette-medium">
 			              <span class="a"></span>
 			              <span class="b"></span>
@@ -161,7 +161,10 @@
       		</fieldset>
 
       		<fieldset class="form__share">
-      			<h2><i class="fas fa-share-alt"></i>Comparte </h2>
+      			<h2 class="form__share__title">
+      				<span><i class="fas fa-share-alt"></i>Comparte</span>
+      				<span><i class="fas fa-chevron-down"></i></span>
+      			</h2>
       			<div class="form__share__submit border">
       				<input type="submit" value="Crear tarjeta" />
       				<!--ICONO COMO BACKGROUND DEL DIV-->
