@@ -1,2 +1,53 @@
 @import "layout/_form_design.scss";
 @import "layout/_form_fill.scss";
+
+.border {
+  border-bottom: 2px solid $color-medium;
+}
+
+.form__share__title {
+  text-transform: uppercase;
+  color: $color-medium-dark;
+  font-size: rem(18);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  .fa-share-alt {
+    color: $color-main;
+    margin-right: rem(10);
+  }
+  .fa-chevron-down {
+    color: $color-medium-dark;
+  }
+}
+
+.form__share__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-self: center;
+
+  .form__share__submit {
+    margin-bottom: rem(30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(199);
+    height: rem(50);
+    background-color: $color-main;
+    border-radius: 12px;
+    border-color: $color-main;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    font-family: $font-main;
+    font-size: $font-medium;
+    color: $color-light;
+    text-transform: uppercase;
+    i {
+      margin-right: rem(12);
+    }
+  }
+}
