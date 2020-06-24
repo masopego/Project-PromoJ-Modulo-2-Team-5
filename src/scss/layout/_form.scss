@@ -51,3 +51,20 @@
     }
   }
 }
+
+.js-accordion-title-active {
+}
+
+.js-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: ease 0.8s;
+}
+
+.js-acc-icon-down {
+  transform: rotate(180deg);
+}
+
+.js-accordion-content-open {
+  max-height: 100%;
+}
