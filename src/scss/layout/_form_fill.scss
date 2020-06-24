@@ -32,6 +32,20 @@
     padding-left: 10px;
   }
 
+  .form_control.error input {
+    border: 1px solid red;
+  }
+
+  .form_control.error.message {
+    visibility: visible;
+    color: red;
+  }
+
+  .message {
+    display: block;
+    visibility: hidden;
+  }
+
   .label {
     font-size: 14px;
   }
