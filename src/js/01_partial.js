@@ -10,32 +10,34 @@ const accordionIcons = document.querySelectorAll(".js-accordion-icon");
 
 /* add click event listener to ALL accordion section titles */
 accordionTitles.forEach((accordionTitle) => {
-  accordionTitle.addEventListener("click", (x) => {
-    /*reset all accordions to closed */
-    accordionContents.forEach((accContent) => (accContent.style.maxHeight = 0));
-
+  accordionTitle.addEventListener("click", () => {
+    /*remove active class from all titles*/
     accordionTitles.forEach((accordionTitle) =>
       accordionTitle.classList.remove("js-accordion-title-active")
     );
-    /*reset orientation of icons */
-    accordionIcons.forEach(
-      (accordionIcon) => (accordionIcon.style.transform = "rotate(0)")
+    /*reset all accordions to closed */
+    accordionContents.forEach((accContent) =>
+      accContent.classList.remove("js-accordion-content-open")
     );
+
+    /*reset orientation of icons */
+    accordionIcons.forEach((accordionIcon) =>
+      accordionIcon.classList.remove("fa-rotate-180")
+    );
+    /*create variable for content block of current accordion*/
+    const accordionContent = accordionTitle.nextElementSibling;
 
     /*add active class to current accordion */
     accordionTitle.classList.toggle("js-accordion-title-active");
-    /*create variable for content block of current accordion*/
-    const jsAccordionContent = accordionTitle.nextElementSibling;
-    /*create variable for icon in accordion title block */
-    const jsTitleIcon = accordionTitle.lastElementChild;
 
     if (accordionTitle.classList.contains("js-accordion-title-active")) {
-      jsAccordionContent.style.maxHeight =
-        jsAccordionContent.scrollHeight + "px";
-      jsTitleIcon.style.transform = "rotate(180deg)";
+      /*create variable for icon in accordion title block */
+      const accordionIcon = accordionTitle.lastElementChild;
+      accordionIcon.classList.add("fa-rotate-180");
+      accordionContent.classList.add("js-accordion-content-open");
     } else {
-      jsAccordionContent.style.maxHeight = 0;
-      jsTitleIcon.style.transform = "rotate(0)";
+      accordionIcon.classList.remove("fa-rotate-180");
+      accordionContent.classList.remove("js-accordion-content-open");
     }
   });
 });
