@@ -1,5 +1,5 @@
-@import "layout/_form_design.scss";
-@import "layout/_form_fill.scss";
+@import 'layout/_form_design.scss';
+@import 'layout/_form_fill.scss';
 
 .border {
   border-bottom: 2px solid $color-medium;
@@ -62,4 +62,8 @@
 
 .js-accordion-content-open {
   max-height: 100%;
+}
+
+.add-cursor-pointer {
+  cursor: pointer;
 }
