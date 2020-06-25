@@ -32,18 +32,19 @@
     padding-left: 10px;
   }
 
-  .form_control.error input {
+  .border-input {
     border: 1px solid red;
   }
 
-  .form_control.error.message {
-    visibility: visible;
+  .error-message {
     color: red;
+    display: none;
   }
 
-  .message {
-    display: block;
-    visibility: hidden;
+  .error {
+    .error-message {
+      display: block;
+    }
   }
 
   .label {
@@ -73,7 +74,7 @@
   .fa,
   .far,
   .fas {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     color: $color-main;
   }
 }

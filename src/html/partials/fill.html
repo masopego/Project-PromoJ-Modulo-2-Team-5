@@ -4,7 +4,7 @@
     <span><i class="fas fa-chevron-down"></i></span>
   </h2>
   <div class="form-container">
-    <div class="form_control error">
+    <div class="form_control">
       <label class="label" for="name"
         >Nombre completo<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
@@ -16,9 +16,9 @@
         placeholder="Ej: Jeanne Baret"
         required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce un nombre válido</small>
     </div>
-    <div class="form_control error">
+    <div class="form_control">
       <label class="label" for="job"
         >Puesto<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
@@ -30,9 +30,9 @@
         placeholder="Ej: Botánica"
         required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce una profesión válida</small>
     </div>
-    <div class="form_control error">
+    <div class="form_control">
       <label class="label" for="image"
         >Imagen de perfil<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
@@ -48,20 +48,23 @@
         placeholder="Ej: jeanne-baret@gmail.com"
         required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce un email válido</small>
     </div>
-    <div class="form_control error">
-      <label class="label" for="phone">Teléfono</label>
+    <div class="form_control">
+      <label class="label" for="phone"
+        >Teléfono<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
       <input
         class="box"
         type="tel"
         id="phone"
         name="phone"
         placeholder="Ej: 555-55-55-55"
+        required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce un teléfono válido</small>
     </div>
-    <div class="form_control error">
+    <div class="form_control">
       <label class="label" for="linkedin"
         >Linkedin<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
@@ -73,9 +76,9 @@
         placeholder="https://www.linkedin.com/in/JeanneBaret"
         required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce tu Linkedin</small>
     </div>
-    <div class="form_control error">
+    <div class="form_control">
       <label class="label" for="github"
         >Github<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
@@ -87,7 +90,7 @@
         placeholder="https://github.com/JeanneBaret"
         required
       />
-      <small class="message">Error message</small>
+      <small class="error-message">Introduce tu Github</small>
     </div>
   </div>
 </div>
