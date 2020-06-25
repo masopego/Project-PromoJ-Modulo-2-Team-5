@@ -74,3 +74,15 @@ function changeToMedium() {
 }
 
 mediumSelector.addEventListener('click', changeToMedium);
+
+const frameSwitcher = document.querySelector('.js-frame-button');
+
+const frameHidden = document.querySelector('.frame-hidden-js');
+
+function switchFrame() {
+  frameHidden.classList.toggle('frame-hidden-js');
+  frameSwitcher.classList.toggle('js-frame-button-off');
+  frameSwitcher.classList.toggle('js-frame-button-active');
+}
+
+frameSwitcher.addEventListener('click', switchFrame);

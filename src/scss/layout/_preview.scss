@@ -130,6 +130,9 @@
 }
 
 .frame {
+  &-hidden-js {
+    display: none;
+  }
   &-js {
     height: rem(200);
     width: rem(240);

@@ -107,3 +107,43 @@ fieldset {
     background-color: $palette-medium-c;
   }
 }
+
+.design__container__frame {
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: rem(30);
+  h3 {
+    color: $color-medium-dark;
+    font-size: $font-small;
+    font-weight: normal;
+    padding-right: rem(25);
+  }
+  .design__container__button {
+    display: flex;
+    align-items: center;
+    width: rem(40);
+    height: rem(20);
+    border-radius: rem(20);
+    &__round {
+      background-color: $color-neutral;
+      height: rem(20);
+      width: rem(20);
+      border-radius: rem(20);
+    }
+  }
+}
+
+.js-frame-button {
+  &-off {
+    justify-content: flex-start;
+    background-color: $color-fifth;
+  }
+
+  &-active {
+    background-color: $color-main;
+    justify-content: flex-end;
+  }
+}
