@@ -49,7 +49,6 @@
     .photo {
       height: rem(200);
       width: rem(240);
-      background-image: url('../images/plantita_medium2.png');
       background-size: cover;
     }
 
@@ -150,4 +149,20 @@
     background-image: url('../images/transparency_medium.png');
     transform: rotate(deg) scale(-1, 1);
   }
+}
+
+.photo-js-default {
+  background-image: url('../images/lila.png');
+}
+
+.photo-warm {
+  background-image: url('../images/Amapola.png');
+}
+
+.photo-cold {
+  background-image: url('../images/Ginkgo.png');
+}
+
+.photo-medium {
+  background-image: url('../images/plantita_medium2.png');
 }
