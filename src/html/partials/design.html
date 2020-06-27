@@ -4,43 +4,52 @@
   <span><i class="far fa-object-ungroup"></i>Diseña</span
   ><i class="fab fa-pagelines js-accordion-icon fa-rotate-180"></i>
 </h2>
-<div
-  class="design__container border js-accordion-content js-accordion-content-open"
->
-  <div class="design__container__colors">
-    <h3>Colores</h3>
+<div class="js-accordion-content js-accordion-content-open">
+  <div class="design__container">
+    <div class="design__container__colors">
+      <h3>Colores</h3>
+    </div>
+    <div class="design__container__options">
+      <label for="cold" class="cold">
+        <input
+          type="radio"
+          id="cold"
+          name="colors"
+          value="warmcolor"
+          value="warmcolor"
+          checked
+        />
+        <div class="palette-cold">
+          <span class="a"></span>
+          <span class="b"></span>
+          <span class="c"></span>
+        </div>
+      </label>
+      <label for="warm" class="warm">
+        <input id="warm" type="radio" name="colors" value="coldcolor" />
+        <div class="palette-warm">
+          <span class="a"></span>
+          <span class="b"></span>
+          <span class="c"></span>
+        </div>
+      </label>
+      <label for="medium" class="medium">
+        <input id="medium" type="radio" name="colors" value="midiumcolor" />
+        <div class="palette-medium">
+          <span class="a"></span>
+          <span class="b"></span>
+          <span class="c"></span>
+        </div>
+      </label>
+    </div>
   </div>
-  <div class="design__container__options">
-    <label for="cold" class="cold">
-      <input
-        type="radio"
-        id="cold"
-        name="colors"
-        value="warmcolor"
-        value="warmcolor"
-        checked
-      />
-      <div class="palette-cold">
-        <span class="a"></span>
-        <span class="b"></span>
-        <span class="c"></span>
-      </div>
-    </label>
-    <label for="warm" class="warm">
-      <input id="warm" type="radio" name="colors" value="coldcolor" />
-      <div class="palette-warm">
-        <span class="a"></span>
-        <span class="b"></span>
-        <span class="c"></span>
-      </div>
-    </label>
-    <label for="medium" class="medium">
-      <input id="medium" type="radio" name="colors" value="midiumcolor" />
-      <div class="palette-medium">
-        <span class="a"></span>
-        <span class="b"></span>
-        <span class="c"></span>
-      </div>
-    </label>
+  <div class="design__container__frame border">
+    <h3>Marco</h3>
+
+    <a
+      href="#"
+      class="design__container__button js-frame-button js-frame-button-off"
+      ><div class="design__container__button__round"></div
+    ></a>
   </div>
 </div>
