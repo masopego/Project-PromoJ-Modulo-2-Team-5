@@ -4,9 +4,9 @@
 const userName = document.querySelector('.js-inputName');
 const userJob = document.querySelector('.js-inputJob');
 // const userEmail = document.querySelector('.js-inputEmail');
-// const userPhone = document.querySelector('.js-phone');
-// const userLinkedin = document.querySelector('.js-linkedin');
-// const userGithub = document.querySelector('.js-github');
+// const userPhone = document.querySelector('.js-inputPhone');
+// const userLinkedin = document.querySelector('.js-inputLinkedin');
+// const userGithub = document.querySelector('.js-inputGithub');
 
 //constantes de los lugares donde renderizaremos
 
@@ -40,7 +40,6 @@ function renderUserInfo(data) {
   if (renderUserJob.innerHTML === '') {
     renderUserJob.innerHTML = 'Botanist';
   }
-  
 } //pinta la propiedad de ese objeto que se llame name,job..
 
 function updateInputHandler() {
