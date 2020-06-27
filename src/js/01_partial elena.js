@@ -35,6 +35,12 @@ function renderUserInfo(data) {
   // renderUserPhone.innerHTML = data.phone;
   renderUserLinkedin.innerHTML = data.linkedin;
   // renderUserGithub.innerHTML = data.github;
+  if (renderUserName.innerHTML === '') {
+    renderUserName.innerHTML = 'Jeanne Baret';
+  }
+  if (renderUserJob.innerHTML === '') {
+    renderUserJob.innerHTML = 'Botanist';
+  }
 } //pinta la propiedad de ese objeto que se llame name,job..
 
 function updateInputHandler() {
