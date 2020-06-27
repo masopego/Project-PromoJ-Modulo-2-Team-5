@@ -128,14 +128,12 @@
   }
 }
 
-.frame {
-  &-hidden-js {
+.js-frame {
+  height: rem(200);
+  width: rem(240);
+  background-size: cover;
+  &-hidden {
     display: none;
-  }
-  &-js {
-    height: rem(200);
-    width: rem(240);
-    background-size: cover;
   }
 
   &-cold {
@@ -151,7 +149,7 @@
   }
 }
 
-.photo-js-default {
+.js-photo-default {
   background-image: url('../images/lila.png');
 }
 
