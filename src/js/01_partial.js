@@ -17,7 +17,9 @@ function removeClass(element, className) {
 accordionTitles.forEach((accordionTitle) => {
   accordionTitle.addEventListener('click', () => {
     /*remove active class from all titles*/
-    removeClass(accordionTitle, 'js-accordion-title-active');
+    accordionTitles.forEach((accordionTitle) =>
+      removeClass(accordionTitle, 'js-accordion-title-active')
+    );
 
     /*reset all accordions to closed */
     accordionContents.forEach((accContent) =>
