@@ -34,7 +34,7 @@ function validationJob() {
 // }*/
 
 function validationEmail() {
-  if (useremail.value === '') {
+  if (useremail.value === '' || !useremail.value.includes('@')) {
     useremail.classList.add('border-input');
     useremail.parentElement.classList.add('error');
   } else {
