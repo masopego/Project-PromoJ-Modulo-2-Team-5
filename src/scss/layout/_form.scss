@@ -26,6 +26,7 @@
 
 .form__share__button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -46,10 +47,43 @@
     font-size: $font-medium;
     color: $color-light;
     text-transform: uppercase;
+
+    &:disabled {
+      background-color: #d5d5d5;
+      border-color: #d5d5d5;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    }
     i {
       margin-right: rem(12);
     }
   }
+}
+
+.form__share__text--error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/preview.png');
+  border-radius: rem(20);
+  width: 100%;
+  padding: rem(20);
+
+  & p {
+    color: $palette-warm-c;
+    text-align: center;
+    font-weight: 600;
+    line-height: rem(25);
+
+    & span {
+      display: block;
+      color: $color-dark;
+    }
+  }
+}
+
+.js-hidden {
+  display: none;
 }
 
 .js-accordion-title-active {
