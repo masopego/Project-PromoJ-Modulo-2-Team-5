@@ -34,7 +34,8 @@ function validationJob() {
 // }*/
 
 function validationEmail() {
-  if (useremail.value === '' || !useremail.value.includes('@')) {
+  if (useremail.value === '' || !validateEmail(useremail.value)) {
+    //!useremail.value.includes('@')
     useremail.classList.add('js-border-input');
     useremail.parentElement.classList.add('js-error');
   } else {
@@ -44,7 +45,7 @@ function validationEmail() {
 }
 
 function validationPhone() {
-  if (userphone.value === '') {
+  if (userphone.value === '' || !validatePhone(userphone.value)) {
     userphone.classList.add('js-border-input');
     userphone.parentElement.classList.add('js-error');
   } else {
@@ -71,6 +72,16 @@ function validationGithub() {
     usergithub.classList.remove('js-border-input');
     usergithub.parentElement.classList.remove('js-error');
   }
+}
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validatePhone(phone) {
+  const ph = /^([9,7,6]{1})+([0-9]{8})$/;
+  return ph.test(phone);
 }
 
 username.addEventListener('keyup', validationUserName);
