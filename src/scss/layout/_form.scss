@@ -1,5 +1,5 @@
-@import "layout/_form_design.scss";
-@import "layout/_form_fill.scss";
+@import 'layout/_form_design.scss';
+@import 'layout/_form_fill.scss';
 
 .border {
   border-bottom: 2px solid $color-medium;
@@ -50,4 +50,20 @@
       margin-right: rem(12);
     }
   }
+}
+
+.js-accordion-title-active {
+}
+
+.js-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.js-accordion-content-open {
+  max-height: 100%;
+}
+
+.add-cursor-pointer {
+  cursor: pointer;
 }

@@ -1,15 +1,15 @@
 <div class="border">
-  <h2 class="fill-title">
+  <h2 class="fill-title add-cursor-pointer js-accordion-title">
     <span><i class="far fa-keyboard"></i> rellena</span>
-    <span><i class="fas fa-chevron-down"></i></span>
+    <i class="fab fa-pagelines js-accordion-icon"></i>
   </h2>
-  <div class="form-container">
+  <div class="form-container js-accordion-content">
     <div class="form_control">
       <label class="label" for="name"
         >Nombre completo<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputName"
         type="text"
         id="name"
         name="name"
@@ -23,7 +23,7 @@
         >Puesto<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputJob"
         type="text"
         id="job"
         name="job"
@@ -41,7 +41,7 @@
         >Email<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputEmail"
         type="email"
         id="email"
         name="email"
@@ -55,7 +55,7 @@
         >Teléfono<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputPhone"
         type="tel"
         id="phone"
         name="phone"
@@ -69,11 +69,11 @@
         >Linkedin<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputLinkedin"
         type="text"
         id="linkedin"
         name="linkedin"
-        placeholder="https://www.linkedin.com/in/JeanneBaret"
+        placeholder="JeanneBaret"
         required
       />
       <small class="error-message">Introduce tu Linkedin</small>
@@ -83,11 +83,11 @@
         >Github<i class="fas fa-asterisk" aria-hidden="true"></i
       ></label>
       <input
-        class="box"
+        class="box js-inputGithub"
         type="text"
         id="github"
         name="github"
-        placeholder="https://github.com/JeanneBaret"
+        placeholder="JeanneBaret"
         required
       />
       <small class="error-message">Introduce tu Github</small>
