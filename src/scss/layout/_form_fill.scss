@@ -29,8 +29,22 @@
     height: 30px;
     font-family: $font-main;
     font-size: 14px;
-    color: $color-fifth;
     padding-left: 10px;
+  }
+
+  .border-input {
+    border: 1px solid red;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+
+  .error {
+    .error-message {
+      display: block;
+    }
   }
 
   .label {
@@ -60,7 +74,7 @@
   .fa,
   .far,
   .fas {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     color: $color-main;
   }
 }
