@@ -17,7 +17,7 @@ const renderUserJob = document.querySelector('.js-jobPreview');
 // const renderUserLinkedin = document.querySelector('.js-linkedinPreview');
 // const renderUserGithub = document.querySelector('.js-githubPreview');
 
-const userData = {}; //llenarea la funcion vacía con los datos
+const userData = {}; //llenaria la funcion vacía con los datos
 
 function getInputValues() {
   userData.name = userName.value; //llamas al objeto.nombredelapropiedadsilasabes(si no la sabes con corchetes)
@@ -30,7 +30,8 @@ function getInputValues() {
 
 function renderUserInfo(data) {
   renderUserName.innerHTML = data.name;
-  renderUserJob.innerHTML = data.job; // renderUserEmail.innerHTML = data.email;
+  renderUserJob.innerHTML = data.job;
+  // renderUserEmail.innerHTML = data.email;
   // renderUserPhone.innerHTML = data.phone;
   // renderUserLinkedin.innerHTML = data.linkedin;
   // renderUserGithub.innerHTML = data.github;
@@ -45,6 +46,7 @@ function renderUserInfo(data) {
 function updateInputHandler() {
   getInputValues();
   renderUserInfo(userData);
+  console.log(userData);
 }
 
 userName.addEventListener('keyup', updateInputHandler);
