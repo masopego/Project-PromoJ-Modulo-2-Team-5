@@ -39,7 +39,7 @@ function renderUserInfo(data) {
     renderUserName.innerHTML = 'Jeanne Baret';
   }
   if (renderUserJob.innerHTML === '') {
-    renderUserJob.innerHTML = 'Botanist';
+    renderUserJob.innerHTML = 'Botánica';
   }
 } //pinta la propiedad de ese objeto que se llame name,job..
 
