@@ -10,7 +10,7 @@ const userJob = document.querySelector('.js-inputJob');
 
 //constantes de los lugares donde renderizaremos
 
-const renderUserName = document.querySelector('.js-namePreview');
+const renderUserName = document.querySelector('.js-name'); //hemos cambiadoo
 const renderUserJob = document.querySelector('.js-jobPreview');
 // const renderUserEmail = document.querySelector('.js-phonePreview');
 // const renderUserPhone = document.querySelector('.js-emailPreview');
@@ -46,7 +46,6 @@ function renderUserInfo(data) {
 function updateInputHandler() {
   getInputValues();
   renderUserInfo(userData);
-  console.log(userData);
 }
 
 userName.addEventListener('keyup', updateInputHandler);

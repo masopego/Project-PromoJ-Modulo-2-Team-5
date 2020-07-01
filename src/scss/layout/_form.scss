@@ -19,6 +19,7 @@
   align-items: center;
   margin-top: 10px;
   margin-bottom: 25px;
+  cursor: pointer;
   .fa-share-alt {
     color: $color-main;
     margin-right: rem(10);
@@ -90,9 +91,6 @@
   display: none;
 }
 
-.js-accordion-title-active {
-}
-
 .js-accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -100,8 +98,4 @@
 
 .js-accordion-content-open {
   max-height: 100%;
-}
-
-.add-cursor-pointer {
-  cursor: pointer;
 }
