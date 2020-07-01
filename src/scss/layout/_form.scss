@@ -5,6 +5,10 @@
   border-bottom: 2px solid $color-medium;
 }
 
+.border__top {
+  border-top: 2px solid $color-medium;
+}
+
 .form__share__title {
   text-transform: uppercase;
   color: $color-medium-dark;
@@ -64,7 +68,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../images/preview.png');
+  background-image: url('../images/preview2.png');
   border-radius: rem(20);
   width: 100%;
   padding: rem(20);

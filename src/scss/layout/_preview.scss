@@ -1,5 +1,5 @@
 .app__preview {
-  background-image: url('../images/preview.png');
+  background-image: url('../images/preview2.png');
   padding: rem(40) 0;
   @include tablet {
     padding: rem(175) 0;
@@ -15,7 +15,7 @@
       background-color: transparent;
       color: $color-medium-dark;
       font-size: rem(12);
-      span {
+      &--text {
         display: inline-block;
         margin-left: rem(5);
         text-transform: uppercase;
@@ -98,9 +98,9 @@
       border: $palette-cold-c rem(2) solid;
     }
 
-    fas,
-    far,
-    fab {
+    .fas,
+    .far,
+    .fab {
       color: $palette-cold-a;
     }
   }
@@ -109,9 +109,9 @@
       border: $palette-warm-c rem(2) solid;
     }
 
-    fas,
-    far,
-    fab {
+    .fas,
+    .far,
+    .fab {
       color: $palette-warm-a;
     }
   }
@@ -120,9 +120,9 @@
       border: $palette-medium-c rem(2) solid;
     }
 
-    fas,
-    far,
-    fab {
+    .fas,
+    .far,
+    .fab {
       color: $palette-medium-a;
     }
   }
@@ -150,7 +150,7 @@
 }
 
 .js-photo-default {
-  background-image: url('../images/lila.png');
+  background-image: url('../images/lila2.png');
 }
 
 .photo-warm {
