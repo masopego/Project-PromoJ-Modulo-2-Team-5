@@ -79,3 +79,7 @@ function validateForm() {
   }
   return isValid;
 }
+
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+});
