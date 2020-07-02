@@ -80,3 +80,19 @@
     color: $color-main;
   }
 }
+
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+    darle los estilos que queremos */
+  display: none;
+}
+
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+  width: rem(30);
+  height: rem(30);
+  margin-left: rem(15);
+}
