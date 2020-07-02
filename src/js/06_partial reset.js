@@ -3,7 +3,7 @@
 // reset
 
 const resetElement = document.querySelector('.button__reset');
-const palleteDefault = document.querySelector('#cold');
+const paletteDefault = document.querySelector('#cold');
 
 // función para poner todos las tareas a no completadas
 // esta función debe modificar los datos y después pintar y escuchar eventos
@@ -14,9 +14,12 @@ function reset(ev) {
   for (const input of allInputs) {
     // para cada tarea pongo su propiedad complete a false
     input.value = '';
+    // fileField.value = null;
+    profileImage.style = ''; //anula la imagen grande preview
+    profilePreview.style = ''; //anula la imagen pequeña
     changeToCold(); //cambia css
-    palleteDefault.checked = true; //cambia checked a pallete cold css
-    formData.pallete = 1; //cambia value
+    paletteDefault.checked = true; //cambia checked a pallete cold css
+    formData.palette = 1; //cambia value
   }
 }
 
