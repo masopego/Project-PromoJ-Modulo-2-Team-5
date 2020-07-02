@@ -13,6 +13,8 @@ formData = {
   photo: fr.result,
 };
 
+//const allInputs = formInputs.concat(paletteInputs);
+
 const submitButton = document.querySelector('form .js-button-share');
 
 const formInputs = document.querySelectorAll('.js-form .form__fill input');
@@ -21,13 +23,15 @@ const textError = document.querySelector('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
 
-const allInputs = { formInputs, paletteInputs };
-
 const paletteCold = document.querySelector('#cold');
 const paletteWarm = document.querySelector('#warm');
 const paletteMedium = document.querySelector('#medium');
 
-allInputs.forEach((element) => {
+formInputs.forEach((element) => {
+  element.addEventListener('change', changeElement);
+});
+
+paletteInputs.forEach((element) => {
   element.addEventListener('change', changeElement);
 });
 
