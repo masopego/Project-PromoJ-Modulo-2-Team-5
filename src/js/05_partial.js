@@ -3,7 +3,7 @@
 let isValid = false;
 
 formData = {
-  palette: 1,
+  palette: '',
   name: '',
   job: '',
   phone: '',
@@ -15,15 +15,24 @@ formData = {
 
 const submitButton = document.querySelector('form .js-button-share');
 
-const allInputs = document.querySelectorAll('.js-form input');
+const formInputs = document.querySelectorAll('.js-form .form__fill input');
 
 const textError = document.querySelector('.form__share__text--error');
+
+const paletteInputs = document.querySelectorAll('.js-palette');
+
+const allInputs = { formInputs, paletteInputs };
+
+const paletteCold = document.querySelector('#cold');
+const paletteWarm = document.querySelector('#warm');
+const paletteMedium = document.querySelector('#medium');
 
 allInputs.forEach((element) => {
   element.addEventListener('change', changeElement);
 });
 
 function changeElement(event) {
+  validatePalette();
   getValuesFromForm();
   validateForm();
 
@@ -34,13 +43,26 @@ function changeElement(event) {
     submitButton.setAttribute('disabled', 1);
     textError.classList.remove('js-hidden');
   }
+
   console.log(formData);
 }
 
 function getValuesFromForm() {
-  allInputs.forEach((input) => {
+  formInputs.forEach((input) => {
     formData[input.name] = input.value;
   });
+}
+
+function validatePalette() {
+  if (paletteCold.checked === true) {
+    formData.palette = 1;
+  }
+  if (paletteWarm.checked === true) {
+    formData.palette = 2;
+  }
+  if (paletteMedium.checked === true) {
+    formData.palette = 3;
+  }
 }
 
 function validateForm() {
