@@ -52,6 +52,7 @@
     font-size: $font-medium;
     color: $color-light;
     text-transform: uppercase;
+    cursor: pointer;
 
     &:disabled {
       background-color: #d5d5d5;
