@@ -1,5 +1,7 @@
 'use strict';
 
+let formData = {};
+
 const fr = new FileReader();
 const uploadBtn = document.querySelector('.js__profile-trigger');
 const fileField = document.querySelector('.js__profile-upload-btn');
@@ -32,6 +34,7 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  formData.photo = fr.result;
 }
 
 /**

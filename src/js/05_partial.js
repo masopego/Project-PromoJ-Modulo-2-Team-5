@@ -2,7 +2,7 @@
 
 let isValid = false;
 
-const formData = {
+formData = {
   palette: 1,
   name: '',
   job: '',
@@ -10,12 +10,12 @@ const formData = {
   email: '',
   linkedin: '',
   github: '',
-  photo: 'fake',
+  photo: fr.result,
 };
 
 const submitButton = document.querySelector('form .js-button-share');
 
-const allInputs = document.querySelectorAll('.js-form .form__fill input');
+const allInputs = document.querySelectorAll('.js-form input');
 
 const textError = document.querySelector('.form__share__text--error');
 
@@ -26,6 +26,7 @@ allInputs.forEach((element) => {
 function changeElement(event) {
   getValuesFromForm();
   validateForm();
+
   if (isValid === true) {
     submitButton.removeAttribute('disabled');
     textError.classList.add('js-hidden');
@@ -33,6 +34,7 @@ function changeElement(event) {
     submitButton.setAttribute('disabled', 1);
     textError.classList.remove('js-hidden');
   }
+  console.log(formData);
 }
 
 function getValuesFromForm() {
