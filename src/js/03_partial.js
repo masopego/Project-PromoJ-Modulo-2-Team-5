@@ -12,8 +12,8 @@ const userGithub = document.querySelector('.js-inputGithub');
 
 const renderUserName = document.querySelector('.js-name'); //hemos cambiadoo
 const renderUserJob = document.querySelector('.js-jobPreview');
-const renderUserEmail = document.querySelector('.js-phonePreview');
-const renderUserPhone = document.querySelector('.js-emailPreview');
+const renderUserEmail = document.querySelector('.js-emailPreview');
+const renderUserPhone = document.querySelector('.js-phonePreview');
 const renderUserLinkedin = document.querySelector('.js-linkedinPreview');
 const renderUserGithub = document.querySelector('.js-githubPreview');
 
