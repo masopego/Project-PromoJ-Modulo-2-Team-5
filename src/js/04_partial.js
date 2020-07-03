@@ -6,6 +6,7 @@ const useremail = document.querySelector('#email');
 const userphone = document.querySelector('#phone');
 const userlinkedin = document.querySelector('#linkedin');
 const usergithub = document.querySelector('#github');
+const shareClick = document.querySelector('.form__share');
 
 function validationUserName() {
   if (username.value === '') {
@@ -91,3 +92,14 @@ useremail.addEventListener('keyup', validationEmail);
 userphone.addEventListener('keyup', validationPhone);
 userlinkedin.addEventListener('keyup', validationLinkedin);
 usergithub.addEventListener('keyup', validationGithub);
+
+function emptyFieldValidator() {
+  validationUserName();
+  validationJob();
+  validationEmail();
+  validationLinkedin();
+  validationGithub();
+  validateEmail();
+}
+
+shareClick.addEventListener('click', emptyFieldValidator);
