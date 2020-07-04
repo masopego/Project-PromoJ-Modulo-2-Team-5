@@ -38,9 +38,12 @@ function validationEmail() {
     //!useremail.value.includes('@')
     useremail.classList.add('js-border-input');
     useremail.parentElement.classList.add('js-error');
+    /*to deactivate icon in preview card */
+    renderUserEmail.classList.add('js-icon-deactivated');
   } else {
     useremail.classList.remove('js-border-input');
     useremail.parentElement.classList.remove('js-error');
+    renderUserEmail.classList.remove('js-icon-deactivated');
   }
 }
 
@@ -48,9 +51,12 @@ function validationPhone() {
   if (userphone.value === '' || !validatePhone(userphone.value)) {
     userphone.classList.add('js-border-input');
     userphone.parentElement.classList.add('js-error');
+    /*to deactivate icon in preview card */
+    renderUserPhone.classList.add('js-icon-deactivated');
   } else {
     userphone.classList.remove('js-border-input');
     userphone.parentElement.classList.remove('js-error');
+    renderUserPhone.classList.remove('js-icon-deactivated');
   }
 }
 
@@ -58,9 +64,12 @@ function validationLinkedin() {
   if (userlinkedin.value === '') {
     userlinkedin.classList.add('js-border-input');
     userlinkedin.parentElement.classList.add('js-error');
+    /*to deactivate icon in preview card */
+    renderUserLinkedin.classList.add('js-icon-deactivated');
   } else {
     userlinkedin.classList.remove('js-border-input');
     userlinkedin.parentElement.classList.remove('js-error');
+    renderUserLinkedin.classList.remove('js-icon-deactivated');
   }
 }
 
@@ -68,9 +77,12 @@ function validationGithub() {
   if (usergithub.value === '') {
     usergithub.classList.add('js-border-input');
     usergithub.parentElement.classList.add('js-error');
+    /*to deactivate icon in preview card */
+    renderUserGithub.classList.add('js-icon-deactivated');
   } else {
     usergithub.classList.remove('js-border-input');
     usergithub.parentElement.classList.remove('js-error');
+    renderUserGithub.classList.remove('js-icon-deactivated');
   }
 }
 
