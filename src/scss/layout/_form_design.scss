@@ -137,6 +137,13 @@ fieldset {
   }
 }
 
+.text-options li {
+  padding-bottom: 28px;
+  color: $color-medium-dark;
+  padding-right: 10px;
+  text-align: right;
+}
+
 .js-frame-button {
   &-off {
     justify-content: flex-start;
