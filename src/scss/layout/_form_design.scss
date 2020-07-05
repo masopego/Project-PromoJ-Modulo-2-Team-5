@@ -39,13 +39,13 @@ fieldset {
 }
 
 .text-options li {
-  padding-right: 10px;
+  padding-right: rem(10);
   text-align: right;
   color: $color-medium-dark;
 }
 
 .flower-option {
-  padding: 28px 0;
+  padding: rem(28) 0;
 }
 
 .design__container__options {
