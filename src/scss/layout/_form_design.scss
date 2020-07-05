@@ -138,10 +138,13 @@ fieldset {
 }
 
 .text-options li {
-  padding-bottom: 28px;
-  color: $color-medium-dark;
   padding-right: 10px;
   text-align: right;
+  color: $color-medium-dark;
+}
+
+.flower-option {
+  padding: 28px 0;
 }
 
 .js-frame-button {
