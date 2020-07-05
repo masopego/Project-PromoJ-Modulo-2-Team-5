@@ -37,6 +37,17 @@ fieldset {
     font-weight: normal;
   }
 }
+
+.text-options li {
+  padding-right: 10px;
+  text-align: right;
+  color: $color-medium-dark;
+}
+
+.flower-option {
+  padding: 28px 0;
+}
+
 .design__container__options {
   width: rem(120);
   display: inline-block;
