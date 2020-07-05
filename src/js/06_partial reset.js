@@ -2,8 +2,8 @@
 
 // reset
 
-const resetElement = document.querySelector('.button__reset');
-const paletteDefault = document.querySelector('#cold');
+const resetElement = query('.button__reset');
+const paletteDefault = query('#cold');
 
 // función para poner todos las tareas a no completadas
 // esta función debe modificar los datos y después pintar y escuchar eventos
