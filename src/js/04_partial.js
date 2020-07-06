@@ -103,3 +103,17 @@ useremail.addEventListener('keyup', validationEmail);
 userphone.addEventListener('keyup', validationPhone);
 userlinkedin.addEventListener('keyup', validationLinkedin);
 usergithub.addEventListener('keyup', validationGithub);
+
+/*función para activar el aviso de campos vacíos al formulario cuando se clica en la sección comparte */
+const shareClick = document.querySelector('.form__share');
+
+function emptyFieldValidator() {
+  validationUserName();
+  validationJob();
+  validationEmail();
+  validationLinkedin();
+  validationGithub();
+  validateEmail();
+}
+
+shareClick.addEventListener('click', emptyFieldValidator);
