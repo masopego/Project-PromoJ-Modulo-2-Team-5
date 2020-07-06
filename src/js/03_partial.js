@@ -1,5 +1,3 @@
-'use strict';
-
 //constantes de los valores que introduce el usuario
 const userName = query('.js-inputName');
 const userJob = query('.js-inputJob');

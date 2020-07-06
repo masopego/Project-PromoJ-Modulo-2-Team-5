@@ -1,5 +1,3 @@
-'use strict';
-
 let isValid = false;
 
 formData = {
@@ -47,8 +45,6 @@ function changeElement(event) {
     submitButton.setAttribute('disabled', 1);
     textError.classList.remove('js-hidden');
   }
-
-  console.log(formData);
 }
 
 function getValuesFromForm() {

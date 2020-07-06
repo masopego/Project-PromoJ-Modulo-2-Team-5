@@ -1,4 +1,4 @@
-'use strict';
+
 const username = query('#name');
 const userjob = query('#job');
 //const userimage = query('#image');

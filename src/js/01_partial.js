@@ -1,5 +1,3 @@
-'use strict';
-
 /*variable for ALL accordion section titles */
 const accordionTitles = document.querySelectorAll('.js-accordion-title');
 /*variable for ALL accordion section content blocks */
@@ -17,19 +15,13 @@ function removeClass(element, className) {
 accordionTitles.forEach((accordionTitle) => {
   accordionTitle.addEventListener('click', () => {
     /*remove active class from all titles*/
-    accordionTitles.forEach((accordionTitle) =>
-      removeClass(accordionTitle, 'js-accordion-title-active')
-    );
+    accordionTitles.forEach((accordionTitle) => removeClass(accordionTitle, 'js-accordion-title-active'));
 
     /*reset all accordions to closed */
-    accordionContents.forEach((accContent) =>
-      removeClass(accContent, 'js-accordion-content-open')
-    );
+    accordionContents.forEach((accContent) => removeClass(accContent, 'js-accordion-content-open'));
 
     /*reset orientation of icons */
-    accordionIcons.forEach((accordionIcon) =>
-      removeClass(accordionIcon, 'fa-rotate-180')
-    );
+    accordionIcons.forEach((accordionIcon) => removeClass(accordionIcon, 'fa-rotate-180'));
 
     /*create variable for content block of selected accordion*/
     const accordionContent = accordionTitle.nextElementSibling;

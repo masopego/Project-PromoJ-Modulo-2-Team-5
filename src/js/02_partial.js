@@ -1,5 +1,3 @@
-'use strict';
-
 const borderPV = query('.js-border');
 const namePV = query('.js-name');
 const iconPV = query('.js-icon');
@@ -62,7 +60,6 @@ function changeToWarm() {
   photoPV.classList.remove('photo-cold', 'photo-medium', 'js-photo-default');
 
   formData.palette = '2';
-  console.log(formData);
 }
 
 warmSelector.addEventListener('change', changeToWarm);
@@ -91,7 +88,6 @@ function changeToMedium() {
   photoPV.classList.remove('photo-cold', 'photo-warm', 'js-photo-default');
 
   formData.palette = '3';
-  console.log(formData);
 }
 
 mediumSelector.addEventListener('change', changeToMedium);
