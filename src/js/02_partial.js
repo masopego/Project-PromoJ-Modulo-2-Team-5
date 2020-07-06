@@ -10,6 +10,10 @@ const coldSelector = query('.cold');
 const warmSelector = query('.warm');
 const mediumSelector = query('.medium');
 
+const paletteCold = query('#cold');
+const paletteWarm = query('#warm');
+const paletteMedium = query('#medium');
+
 //COLD PALETTE
 
 function changeToCold() {
@@ -34,6 +38,7 @@ function changeToCold() {
   photoPV.classList.remove('photo-warm', 'photo-medium', 'js-photo-default');
 
   formData.palette = '1';
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 coldSelector.addEventListener('change', changeToCold);
@@ -62,7 +67,9 @@ function changeToWarm() {
   photoPV.classList.remove('photo-cold', 'photo-medium', 'js-photo-default');
 
   formData.palette = '2';
+
   console.log(formData);
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 warmSelector.addEventListener('change', changeToWarm);
@@ -92,6 +99,7 @@ function changeToMedium() {
 
   formData.palette = '3';
   console.log(formData);
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 mediumSelector.addEventListener('change', changeToMedium);
