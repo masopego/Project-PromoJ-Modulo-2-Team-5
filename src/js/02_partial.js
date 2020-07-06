@@ -98,7 +98,6 @@ function changeToMedium() {
   photoPV.classList.remove('photo-cold', 'photo-warm', 'js-photo-default');
 
   formData.palette = '3';
-  console.log(formData);
   localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
@@ -112,6 +111,12 @@ function switchFrame() {
   frameHidden.classList.toggle('js-frame-hidden');
   frameSwitcher.classList.toggle('js-frame-button-off');
   frameSwitcher.classList.toggle('js-frame-button-active');
+  if (frameSwitcher.classList.contains('js-frame-button-active')) {
+    localStorage.setItem('frame', 'active');
+  }
+  if (frameSwitcher.classList.contains('js-frame-button-off')) {
+    localStorage.removeItem('frame');
+  }
 }
 
 frameSwitcher.addEventListener('click', switchFrame);
