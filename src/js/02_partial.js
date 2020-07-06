@@ -32,6 +32,8 @@ function changeToCold() {
   //PHOTO
   photoPV.classList.add('photo-cold');
   photoPV.classList.remove('photo-warm', 'photo-medium', 'js-photo-default');
+
+  formData.palette = '1';
 }
 
 coldSelector.addEventListener('change', changeToCold);
@@ -58,6 +60,9 @@ function changeToWarm() {
   //PHOTO
   photoPV.classList.add('photo-warm');
   photoPV.classList.remove('photo-cold', 'photo-medium', 'js-photo-default');
+
+  formData.palette = '2';
+  console.log(formData);
 }
 
 warmSelector.addEventListener('change', changeToWarm);
@@ -84,6 +89,9 @@ function changeToMedium() {
   //PHOTO
   photoPV.classList.add('photo-medium');
   photoPV.classList.remove('photo-cold', 'photo-warm', 'js-photo-default');
+
+  formData.palette = '3';
+  console.log(formData);
 }
 
 mediumSelector.addEventListener('change', changeToMedium);
