@@ -1,11 +1,11 @@
 'use strict';
-const username = document.querySelector('#name');
-const userjob = document.querySelector('#job');
-//const userimage = document.querySelector('#image');
-const useremail = document.querySelector('#email');
-const userphone = document.querySelector('#phone');
-const userlinkedin = document.querySelector('#linkedin');
-const usergithub = document.querySelector('#github');
+const username = query('#name');
+const userjob = query('#job');
+//const userimage = query('#image');
+const useremail = query('#email');
+const userphone = query('#phone');
+const userlinkedin = query('#linkedin');
+const usergithub = query('#github');
 
 function validationUserName() {
   if (username.value === '') {

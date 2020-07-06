@@ -1,13 +1,16 @@
-
 'use strict';
+
+function query(element) {
+  return document.querySelector(element);
+}
 
 let formData = {};
 
 const fr = new FileReader();
-const uploadBtn = document.querySelector('.js__profile-trigger');
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
+const uploadBtn = query('.js__profile-trigger');
+const fileField = query('.js__profile-upload-btn');
+const profileImage = query('.js__profile-image');
+const profilePreview = query('.js__profile-preview');
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
