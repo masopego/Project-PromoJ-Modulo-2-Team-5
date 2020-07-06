@@ -11,7 +11,7 @@ function reset(ev) {
   // prevengo la acción por defecto
   ev.preventDefault();
   // recorro todas las tareas
-  for (const input of allInputs) {
+  for (const input of formInputs) {
     // para cada tarea pongo su propiedad complete a false
     input.value = '';
     // fileField.value = null;
@@ -20,6 +20,10 @@ function reset(ev) {
     changeToCold(); //cambia css
     paletteDefault.checked = true; //cambia checked a pallete cold css
     formData.palette = 1; //cambia value
+
+    renderUserName.innerHTML = 'Jeanne Baret';
+
+    renderUserJob.innerHTML = 'Botánica';
   }
 }
 
