@@ -51,6 +51,7 @@
 
   .label {
     font-size: rem(14);
+    display: block;
   }
 
   .button {
@@ -64,7 +65,6 @@
     font-family: $font-main;
     margin-bottom: rem(20);
     box-shadow: 0 0 rem(4) 0 rgba(0, 0, 0, 0.32);
-    display: block;
     margin-top: rem(7);
   }
 
@@ -95,4 +95,7 @@
   width: rem(30);
   height: rem(30);
   margin-left: rem(15);
+  display: inline-block;
+  position: relative;
+  top: rem(10);
 }
