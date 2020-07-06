@@ -29,6 +29,9 @@
     height: rem(330);
     background-color: $color-light;
     box-shadow: 0 0 rem(5) $color-medium-dark;
+    &:hover {
+      transform: scale(1.1);
+    }
     .top-block {
       padding: rem(20) 0 rem(10);
       .name_job {
