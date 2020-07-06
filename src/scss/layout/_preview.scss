@@ -15,6 +15,7 @@
       background-color: transparent;
       color: $color-medium-dark;
       font-size: rem(12);
+      cursor: pointer;
       &--text {
         display: inline-block;
         margin-left: rem(5);
@@ -29,6 +30,9 @@
     height: rem(330);
     background-color: $color-light;
     box-shadow: 0 0 rem(5) $color-medium-dark;
+    &:hover {
+      transform: scale(1.1);
+    }
     .top-block {
       padding: rem(20) 0 rem(10);
       .name_job {
@@ -163,4 +167,8 @@
 
 .photo-medium {
   background-image: url('../images/Girasol.png');
+}
+
+.js-icon-deactivated {
+  opacity: 0.5;
 }

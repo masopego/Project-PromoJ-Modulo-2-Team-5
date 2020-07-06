@@ -52,6 +52,7 @@
     font-size: $font-medium;
     color: $color-light;
     text-transform: uppercase;
+    cursor: pointer;
 
     &:disabled {
       background-color: #d5d5d5;
@@ -94,8 +95,11 @@
 .js-accordion-content {
   max-height: 0;
   overflow: hidden;
+  transform: scaleY(0);
 }
 
 .js-accordion-content-open {
   max-height: 100%;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(1);
 }

@@ -2,30 +2,44 @@
 
 let isValid = false;
 
-const formData = {
-  palette: 1,
+formData = {
+  palette: '',
   name: '',
   job: '',
   phone: '',
   email: '',
   linkedin: '',
   github: '',
-  photo: 'fake',
+  photo: fr.result,
 };
 
-const submitButton = document.querySelector('form .js-button-share');
+// const allInputs = formInputs.concat(paletteInputs);
 
-const allInputs = document.querySelectorAll('.js-form .form__fill input');
+const submitButton = query('form .js-button-share');
 
-const textError = document.querySelector('.form__share__text--error');
+const formInputs = document.querySelectorAll('.js-form .form__fill input');
 
-allInputs.forEach((element) => {
+const textError = query('.form__share__text--error');
+
+const paletteInputs = document.querySelectorAll('.js-palette');
+
+const paletteCold = query('#cold');
+const paletteWarm = query('#warm');
+const paletteMedium = query('#medium');
+
+formInputs.forEach((element) => {
+  element.addEventListener('change', changeElement);
+});
+
+paletteInputs.forEach((element) => {
   element.addEventListener('change', changeElement);
 });
 
 function changeElement(event) {
+  validatePalette();
   getValuesFromForm();
   validateForm();
+
   if (isValid === true) {
     submitButton.removeAttribute('disabled');
     textError.classList.add('js-hidden');
@@ -33,12 +47,26 @@ function changeElement(event) {
     submitButton.setAttribute('disabled', 1);
     textError.classList.remove('js-hidden');
   }
+
+  console.log(formData);
 }
 
 function getValuesFromForm() {
-  allInputs.forEach((input) => {
+  formInputs.forEach((input) => {
     formData[input.name] = input.value;
   });
+}
+
+function validatePalette() {
+  if (paletteCold.checked === true) {
+    formData.palette = 1;
+  }
+  if (paletteWarm.checked === true) {
+    formData.palette = 2;
+  }
+  if (paletteMedium.checked === true) {
+    formData.palette = 3;
+  }
 }
 
 function validateForm() {
@@ -51,3 +79,7 @@ function validateForm() {
   }
   return isValid;
 }
+
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+});
