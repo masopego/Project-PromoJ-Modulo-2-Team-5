@@ -53,7 +53,9 @@ function changeElement(event) {
 
 function getValuesFromForm() {
   formInputs.forEach((input) => {
-    formData[input.name] = input.value;
+    if (input.type !== 'file') {
+      formData[input.name] = input.value;
+    }
   });
 }
 
@@ -93,12 +95,13 @@ let formData2 = {
 
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
+  console.log(formData);
   // Usa fetch() para enviar una petición POST con datos codificados en JSON .
   const url =
     'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
   fetch(url, {
     method: 'POST', // or 'PUT'
-    body: JSON.stringify(formData2), // data can be `string` or {object}!
+    body: JSON.stringify(formData), // data can be `string` or {object}!
     headers: {
       'content-type': 'application/json',
     },
