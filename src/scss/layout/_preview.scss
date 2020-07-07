@@ -15,7 +15,11 @@
       background-color: transparent;
       color: $color-medium-dark;
       font-size: rem(12);
+      outline: none;
       cursor: pointer;
+      &:hover {
+        border-color: $color-main;
+      }
       &--text {
         display: inline-block;
         margin-left: rem(5);
