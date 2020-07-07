@@ -120,4 +120,10 @@ function switchFrame() {
   }
 }
 
+function resetFrame() {
+  frameHidden.classList.add('js-frame-hidden');
+  frameSwitcher.classList.add('js-frame-button-off');
+  frameSwitcher.classList.remove('js-frame-button-active');
+}
+
 frameSwitcher.addEventListener('click', switchFrame);

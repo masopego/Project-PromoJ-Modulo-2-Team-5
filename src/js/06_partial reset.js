@@ -25,6 +25,7 @@ function reset(ev) {
 
     renderUserJob.innerHTML = 'Botánica';
   }
+  resetFrame();
 }
 
 resetElement.addEventListener('click', reset);

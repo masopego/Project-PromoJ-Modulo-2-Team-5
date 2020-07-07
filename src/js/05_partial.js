@@ -74,10 +74,6 @@ function validatePalette() {
 function validateForm() {
   isValid = true;
 
-  if (formData.phone === '') {
-    formData.phone = undefined;
-  }
-
   for (let item in formData) {
     if (formData[item] === '') {
       isValid = false;
