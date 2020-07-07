@@ -103,3 +103,21 @@
   transition: transform 0.3s ease-out;
   transform: scaleY(1);
 }
+
+.twitter--link {
+  color: white;
+}
+
+.twitter--button {
+  margin-top: 20px;
+  height: 50px;
+  background-color: #1a91da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  align-self: center;
+  border-radius: 12px;
+  font-size: rem(18);
+}

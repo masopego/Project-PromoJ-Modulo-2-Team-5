@@ -108,9 +108,22 @@ submitButton.addEventListener('click', function (event) {
 });
 
 function showURL(result) {
+  const responseURL = document.querySelector('.form__share__text__p');
+  let cardUrl = result.cardURL;
+  const twitterLink = document.querySelector('.twitter--link');
+  const btn = document.querySelector('twitterdiv');
+
   if (result.success) {
-    console.log('<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
-  } else {
-    console.log('aloja');
+    textError.classList.remove('js-hidden');
+    btn.classList.remove('js-hidden');
+    twitterLink.setAttribute('href', cardUrl);
+    responseURL.innerHTML =
+      '<span>🌱La tarjeta ha sido creada:</span> <a href=' +
+      cardUrl +
+      'target="_blank" >' +
+      cardUrl +
+      '</a>';
   }
 }
+
+shareClick.addEventListener('click', showURL);
