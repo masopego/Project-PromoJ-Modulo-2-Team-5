@@ -2,17 +2,6 @@
 
 let isValid = false;
 
-formData = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: fr.result,
-};
-
 // const allInputs = formInputs.concat(paletteInputs);
 
 const submitButton = query('form .js-button-share');
@@ -95,15 +84,13 @@ submitButton.addEventListener('click', function (event) {
     },
   })
     .then(function (resp) {
-      console.log(resp);
       return resp.json();
     })
     .then(function (result) {
       showURL(result);
-      console.log(result);
     })
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 });
 
@@ -114,3 +101,5 @@ function showURL(result) {
     console.log('aloja');
   }
 }
+
+changeElement();
