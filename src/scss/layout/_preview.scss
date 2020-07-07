@@ -60,6 +60,8 @@
       display: flex;
       margin-left: rem(20);
       padding: rem(10) 0 rem(12);
+      a {
+      }
       li {
         border-radius: 50%;
         width: rem(32);
@@ -67,6 +69,10 @@
         text-align: center;
         line-height: rem(32);
         margin-right: rem(10);
+        transition: all ease 0.7s;
+        &:hover {
+          border-radius: 15%;
+        }
       }
     }
   }
@@ -170,5 +176,5 @@
 }
 
 .js-icon-deactivated {
-  opacity: 0.5;
+  opacity: 0.3;
 }
