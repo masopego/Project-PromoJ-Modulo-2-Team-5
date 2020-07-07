@@ -117,11 +117,13 @@ function showURL(result) {
   if (result.success) {
     textError.classList.remove('js-hidden');
     btn.classList.remove('js-hidden');
+    const textCard =
+      'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
     responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
     const twitterLink = document.querySelector('.twitter--link');
     twitterLink.setAttribute(
       'href',
-      `https://twitter.com/intent/tweet?text=&url=${result.cardURL}`
+      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
     );
   }
 }
