@@ -19,6 +19,7 @@ const renderUserGithub = query('.js-githubPreview');
 
 const userData = {}; //llenaria la funcion vacía con los datos
 
+//llama a los datos guardados en el localstorage
 const getFromLocalStorage = () => {
   const userDataRaw = localStorage.getItem('data');
   const userColorRaw = localStorage.getItem('color');
@@ -40,6 +41,7 @@ const getFromLocalStorage = () => {
 };
 
 getFromLocalStorage();
+//fin de ejecución del local storage
 
 function getInputValues() {
   userData.name = userName.value; //llamas al objeto.nombredelapropiedadsilasabes(si no la sabes con corchetes)
@@ -68,9 +70,10 @@ function renderUserInfo(data) {
 function updateInputHandler() {
   getInputValues();
   renderUserInfo(userData);
-  localStorage.setItem('data', JSON.stringify(userData));
+  localStorage.setItem('data', JSON.stringify(userData)); //añadí esto para que se guarden los datos en local
 }
 
+//asigna los valores para que se guarden el local storage
 function localStorageForm(data) {
   userName.value = data.name;
   userJob.value = data.job;
@@ -80,18 +83,19 @@ function localStorageForm(data) {
   userGithub.value = data.github;
 }
 
+//selecciona color y checkbox guardado en local storage al arrancar la página
 function localStorageColor(color) {
   if (color === '1') {
     changeToCold();
-    paletteCold.setAttribute('checked', 'true');
+    paletteCold.setAttribute('checked', '');
   }
   if (color === '2') {
     changeToWarm();
-    paletteWarm.setAttribute('checked', 'true');
+    paletteWarm.setAttribute('checked', '');
   }
   if (color === '3') {
     changeToMedium();
-    paletteMedium.setAttribute('checked', 'true');
+    paletteMedium.setAttribute('checked', '');
   }
 }
 

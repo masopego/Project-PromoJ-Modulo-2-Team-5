@@ -111,6 +111,7 @@ function switchFrame() {
   frameHidden.classList.toggle('js-frame-hidden');
   frameSwitcher.classList.toggle('js-frame-button-off');
   frameSwitcher.classList.toggle('js-frame-button-active');
+  //asigna la clase para local storage
   if (frameSwitcher.classList.contains('js-frame-button-active')) {
     localStorage.setItem('frame', 'active');
   }
