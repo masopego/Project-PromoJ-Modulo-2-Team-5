@@ -23,9 +23,9 @@ const textError = query('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
 
-const paletteCold = query('#cold');
-const paletteWarm = query('#warm');
-const paletteMedium = query('#medium');
+// const paletteCold = query('#cold');
+// const paletteWarm = query('#warm');
+// const paletteMedium = query('#medium');
 
 formInputs.forEach((element) => {
   element.addEventListener('change', changeElement);
@@ -53,9 +53,7 @@ function changeElement(event) {
 
 function getValuesFromForm() {
   formInputs.forEach((input) => {
-    if (input.type !== 'file') {
-      formData[input.name] = input.value;
-    }
+    formData[input.name] = input.value;
   });
 }
 
@@ -82,47 +80,7 @@ function validateForm() {
   return isValid;
 }
 
-let formData2 = {
-  palette: '1',
-  name: '22',
-  job: '33',
-  phone: 'das',
-  email: 'asda@gmail.com',
-  linkedin: 'asd',
-  github: 'asda',
-  photo: 'fr.result',
-};
-
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
-  console.log(formData);
-  // Usa fetch() para enviar una petición POST con datos codificados en JSON .
-  const url =
-    'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
-  fetch(url, {
-    method: 'POST', // or 'PUT'
-    body: JSON.stringify(formData), // data can be `string` or {object}!
-    headers: {
-      'content-type': 'application/json',
-    },
-  })
-    .then(function (resp) {
-      console.log(resp);
-      return resp.json();
-    })
-    .then(function (result) {
-      showURL(result);
-      console.log(result);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
 });
 
-function showURL(result) {
-  if (result.success) {
-    console.log('<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
-  } else {
-    console.log('aloja');
-  }
-}
