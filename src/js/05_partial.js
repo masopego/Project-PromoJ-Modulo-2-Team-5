@@ -23,9 +23,9 @@ const textError = query('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
 
-const paletteCold = query('#cold');
-const paletteWarm = query('#warm');
-const paletteMedium = query('#medium');
+// const paletteCold = query('#cold');
+// const paletteWarm = query('#warm');
+// const paletteMedium = query('#medium');
 
 formInputs.forEach((element) => {
   element.addEventListener('change', changeElement);

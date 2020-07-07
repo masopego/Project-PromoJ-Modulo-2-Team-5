@@ -10,6 +10,10 @@ const coldSelector = query('.cold');
 const warmSelector = query('.warm');
 const mediumSelector = query('.medium');
 
+const paletteCold = query('#cold');
+const paletteWarm = query('#warm');
+const paletteMedium = query('#medium');
+
 //COLD PALETTE
 
 function changeToCold() {
@@ -34,6 +38,7 @@ function changeToCold() {
   photoPV.classList.remove('photo-warm', 'photo-medium', 'js-photo-default');
 
   formData.palette = '1';
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 coldSelector.addEventListener('change', changeToCold);
@@ -62,7 +67,9 @@ function changeToWarm() {
   photoPV.classList.remove('photo-cold', 'photo-medium', 'js-photo-default');
 
   formData.palette = '2';
+
   console.log(formData);
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 warmSelector.addEventListener('change', changeToWarm);
@@ -91,7 +98,7 @@ function changeToMedium() {
   photoPV.classList.remove('photo-cold', 'photo-warm', 'js-photo-default');
 
   formData.palette = '3';
-  console.log(formData);
+  localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 
 mediumSelector.addEventListener('change', changeToMedium);
@@ -104,6 +111,13 @@ function switchFrame() {
   frameHidden.classList.toggle('js-frame-hidden');
   frameSwitcher.classList.toggle('js-frame-button-off');
   frameSwitcher.classList.toggle('js-frame-button-active');
+  //asigna la clase para local storage
+  if (frameSwitcher.classList.contains('js-frame-button-active')) {
+    localStorage.setItem('frame', 'active');
+  }
+  if (frameSwitcher.classList.contains('js-frame-button-off')) {
+    localStorage.removeItem('frame');
+  }
 }
 
 frameSwitcher.addEventListener('click', switchFrame);
