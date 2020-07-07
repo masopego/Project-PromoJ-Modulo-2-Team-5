@@ -103,7 +103,6 @@ submitButton.addEventListener('click', function (event) {
     .then(function (result) {
       showURL(result);
       console.log(result);
-      twitterURL = result.cardURL;
     })
     .catch(function (error) {
       console.log(error);
@@ -119,14 +118,12 @@ function showURL(result) {
     textError.classList.remove('js-hidden');
     btn.classList.remove('js-hidden');
     responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+    const twitterLink = document.querySelector('.twitter--link');
+    twitterLink.setAttribute(
+      'href',
+      `https://twitter.com/intent/tweet?text=&url=${result.cardURL}`
+    );
   }
 }
-function postTwitter() {
-  const twitterLink = document.querySelector('.twitter--link');
-  twitterLink.setAttribute(
-    'href',
-    `https://twitter.com/intent/tweet?text='&url=${twitterURL}`
-  );
-}
-
-shareClick.addEventListener('click', postTwitter);
+const createCard = document.querySelector('.form__share__submit');
+createCard.addEventListener('click', showURL);

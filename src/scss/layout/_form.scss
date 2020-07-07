@@ -88,10 +88,6 @@
   }
 }
 
-.js-hidden {
-  display: none;
-}
-
 .js-accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -120,4 +116,8 @@
   align-self: center;
   border-radius: 12px;
   font-size: rem(18);
+}
+
+.js-hidden {
+  display: none;
 }
