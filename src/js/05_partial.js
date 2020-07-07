@@ -23,6 +23,8 @@ const textError = query('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
 
+let twitterURL;
+
 // const paletteCold = query('#cold');
 // const paletteWarm = query('#warm');
 // const paletteMedium = query('#medium');
@@ -101,6 +103,7 @@ submitButton.addEventListener('click', function (event) {
     .then(function (result) {
       showURL(result);
       console.log(result);
+      twitterURL = result.cardURL;
     })
     .catch(function (error) {
       console.log(error);
@@ -109,21 +112,21 @@ submitButton.addEventListener('click', function (event) {
 
 function showURL(result) {
   const responseURL = document.querySelector('.form__share__text__p');
-  let cardUrl = result.cardURL;
-  const twitterLink = document.querySelector('.twitter--link');
-  const btn = document.querySelector('twitterdiv');
+
+  const btn = document.querySelector('.twitterdiv');
 
   if (result.success) {
     textError.classList.remove('js-hidden');
     btn.classList.remove('js-hidden');
-    twitterLink.setAttribute('href', cardUrl);
-    responseURL.innerHTML =
-      '<span>🌱La tarjeta ha sido creada:</span> <a href=' +
-      cardUrl +
-      'target="_blank" >' +
-      cardUrl +
-      '</a>';
+    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
   }
 }
+function postTwitter() {
+  const twitterLink = document.querySelector('.twitter--link');
+  twitterLink.setAttribute(
+    'href',
+    `https://twitter.com/intent/tweet?text='&url=${twitterURL}`
+  );
+}
 
-shareClick.addEventListener('click', showURL);
+shareClick.addEventListener('click', postTwitter);
