@@ -53,7 +53,9 @@ function changeElement(event) {
 
 function getValuesFromForm() {
   formInputs.forEach((input) => {
-    formData[input.name] = input.value;
+    if (input.type !== 'file') {
+      formData[input.name] = input.value;
+    }
   });
 }
 
@@ -82,5 +84,33 @@ function validateForm() {
 
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
+  // Usa fetch() para enviar una petición POST con datos codificados en JSON .
+  const url =
+    'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
+  fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(formData), // data can be `string` or {object}!
+    headers: {
+      'content-type': 'application/json',
+    },
+  })
+    .then(function (resp) {
+      console.log(resp);
+      return resp.json();
+    })
+    .then(function (result) {
+      showURL(result);
+      console.log(result);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
 
+function showURL(result) {
+  if (result.success) {
+    console.log('<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
+  } else {
+    console.log('aloja');
+  }
+}
