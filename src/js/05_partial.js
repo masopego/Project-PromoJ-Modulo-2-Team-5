@@ -74,6 +74,10 @@ function validatePalette() {
 function validateForm() {
   isValid = true;
 
+  if (formData.phone === '') {
+    formData.phone = undefined;
+  }
+
   for (let item in formData) {
     if (formData[item] === '') {
       isValid = false;
@@ -85,8 +89,7 @@ function validateForm() {
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   // Usa fetch() para enviar una petición POST con datos codificados en JSON .
-  const url =
-    'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
+  const url = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
   fetch(url, {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(formData), // data can be `string` or {object}!
