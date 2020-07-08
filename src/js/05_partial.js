@@ -103,13 +103,13 @@ function showURL(result) {
     textError.classList.remove('js-hidden');
     btn.classList.remove('js-hidden');
     const textCard =
-      'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
+      'Echa un vistazo a mi tarjeta de visita, hecha con %23BotanicalProfileCards" 🌱 ';
     responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span><a href="${result.cardURL}" target="_blank" >${result.cardURL}</a>`;
     const twitterLink = document.querySelector('.twitter--link');
     submitButton.setAttribute('disabled', '');
     twitterLink.setAttribute(
       'href',
-      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
+      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}&hashtags=Adalabers,JavaScript,PromoJemison,week7of12`
     );
   }
 }
