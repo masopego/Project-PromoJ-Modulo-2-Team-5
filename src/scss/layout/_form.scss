@@ -53,6 +53,10 @@
     color: $color-light;
     text-transform: uppercase;
     cursor: pointer;
+    outline: none;
+    &:hover {
+      background: rgba(255, 115, 52, 0.8);
+    }
 
     &:disabled {
       background-color: #d5d5d5;
