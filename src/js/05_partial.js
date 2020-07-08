@@ -33,7 +33,7 @@ function changeElement(event) {
     submitButton.removeAttribute('disabled');
     textError.classList.add('js-hidden');
   } else {
-    submitButton.setAttribute('disabled', 1);
+    submitButton.setAttribute('disabled', '');
     textError.classList.remove('js-hidden');
   }
 }
@@ -104,8 +104,9 @@ function showURL(result) {
     btn.classList.remove('js-hidden');
     const textCard =
       'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
-    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span><a href="${result.cardURL}" target="_blank" >${result.cardURL}</a>`;
     const twitterLink = document.querySelector('.twitter--link');
+    submitButton.setAttribute('disabled', '');
     twitterLink.setAttribute(
       'href',
       `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
