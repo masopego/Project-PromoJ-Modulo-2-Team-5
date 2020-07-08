@@ -1,4 +1,3 @@
-
 'use strict';
 
 let isValid = false;
@@ -65,7 +64,9 @@ function validatePalette() {
 
 function validateForm() {
   isValid = true;
-
+  if (formData.phone === '') {
+    formData.phone = undefined;
+  }
   for (let item in formData) {
     if (formData[item] === '') {
       isValid = false;
@@ -116,10 +117,7 @@ function showURL(result) {
   }
 }
 
-
 changeElement();
 
 const createCard = document.querySelector('.form__share__submit');
 createCard.addEventListener('click', showURL);
-
-
