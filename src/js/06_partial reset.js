@@ -26,9 +26,13 @@ function reset(ev) {
     renderUserJob.innerHTML = 'Botánica';
   }
 
+  resetFrame();
+
+
   localStorage.removeItem('data');
   localStorage.removeItem('photo');
   localStorage.removeItem('color');
+
 }
 
 resetElement.addEventListener('click', reset);
