@@ -1,5 +1,3 @@
-'use strict';
-
 // reset
 
 const resetElement = query('.button__reset');
