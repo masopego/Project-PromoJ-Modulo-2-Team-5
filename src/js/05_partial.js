@@ -12,6 +12,8 @@ const textError = query('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
 
+let twitterURL;
+
 // const paletteCold = query('#cold');
 // const paletteWarm = query('#warm');
 // const paletteMedium = query('#medium');
@@ -95,11 +97,27 @@ submitButton.addEventListener('click', function (event) {
 });
 
 function showURL(result) {
+  const responseURL = document.querySelector('.form__share__text__p');
+
+  const btn = document.querySelector('.twitterdiv');
+
   if (result.success) {
-    console.log('<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
-  } else {
-    console.log('aloja');
+    textError.classList.remove('js-hidden');
+    btn.classList.remove('js-hidden');
+    const textCard =
+      'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
+    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+    const twitterLink = document.querySelector('.twitter--link');
+    twitterLink.setAttribute(
+      'href',
+      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
+    );
   }
 }
 
+
 changeElement();
+
+const createCard = document.querySelector('.form__share__submit');
+createCard.addEventListener('click', showURL);
+
