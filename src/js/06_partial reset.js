@@ -1,3 +1,4 @@
+
 // reset
 
 const resetElement = query('.button__reset');
@@ -23,6 +24,13 @@ function reset(ev) {
 
     renderUserJob.innerHTML = 'Botánica';
   }
+
+  resetFrame();
+  localStorage.removeItem('frame');
+
+  localStorage.removeItem('data');
+  localStorage.removeItem('photo');
+  localStorage.removeItem('color');
 }
 
 resetElement.addEventListener('click', reset);

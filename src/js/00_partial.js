@@ -4,13 +4,30 @@ function query(element) {
   return document.querySelector(element);
 }
 
-let formData = {};
+let formData = {
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: '',
+};
 
 const fr = new FileReader();
 const uploadBtn = query('.js__profile-trigger');
 const fileField = query('.js__profile-upload-btn');
 const profileImage = query('.js__profile-image');
 const profilePreview = query('.js__profile-preview');
+
+const localImage = localStorage.getItem('photo');
+
+if (localImage) {
+  profileImage.style.backgroundImage = `url(${localImage})`;
+  profilePreview.style.backgroundImage = `url(${localImage})`;
+  formData.photo = localImage;
+}
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -39,6 +56,7 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   formData.photo = fr.result;
+  localStorage.setItem('photo', formData.photo);
 }
 
 /**
