@@ -1,3 +1,4 @@
+
 'use strict';
 const username = query('#name');
 const userjob = query('#job');
@@ -117,3 +118,4 @@ function emptyFieldValidator() {
 }
 
 shareClick.addEventListener('click', emptyFieldValidator);
+
