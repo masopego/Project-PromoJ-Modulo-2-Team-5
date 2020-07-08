@@ -1,17 +1,7 @@
+
 'use strict';
 
 let isValid = false;
-
-formData = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: fr.result,
-};
 
 // const allInputs = formInputs.concat(paletteInputs);
 
@@ -22,6 +12,8 @@ const formInputs = document.querySelectorAll('.js-form .form__fill input');
 const textError = query('.form__share__text--error');
 
 const paletteInputs = document.querySelectorAll('.js-palette');
+
+let twitterURL;
 
 // const paletteCold = query('#cold');
 // const paletteWarm = query('#warm');
@@ -85,7 +77,8 @@ function validateForm() {
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   // Usa fetch() para enviar una petición POST con datos codificados en JSON .
-  const url = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
+  const url =
+    'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
   fetch(url, {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(formData), // data can be `string` or {object}!
@@ -94,22 +87,39 @@ submitButton.addEventListener('click', function (event) {
     },
   })
     .then(function (resp) {
-      console.log(resp);
       return resp.json();
     })
     .then(function (result) {
       showURL(result);
-      console.log(result);
     })
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 });
 
 function showURL(result) {
+  const responseURL = document.querySelector('.form__share__text__p');
+
+  const btn = document.querySelector('.twitterdiv');
+
   if (result.success) {
-    console.log('<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
-  } else {
-    console.log('aloja');
+    textError.classList.remove('js-hidden');
+    btn.classList.remove('js-hidden');
+    const textCard =
+      'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
+    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+    const twitterLink = document.querySelector('.twitter--link');
+    twitterLink.setAttribute(
+      'href',
+      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
+    );
   }
 }
+
+
+changeElement();
+
+const createCard = document.querySelector('.form__share__submit');
+createCard.addEventListener('click', showURL);
+
+
