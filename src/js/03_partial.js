@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 //constantes de los valores que introduce el usuario
 const userName = query('.js-inputName');
 const userJob = query('.js-inputJob');
@@ -55,7 +56,7 @@ function renderUserInfo(data) {
   renderUserJob.innerHTML = data.job;
   renderUserEmail.href = `mailto:${data.email}`;
   renderUserPhone.href = `tel:${data.phone}`;
-  renderUserLinkedin.href = `https://linkedin.com/${data.linkedin}`;
+  renderUserLinkedin.href = `https://linkedin.com/in/${data.linkedin}`;
   renderUserGithub.href = `https://github.com/${data.github}`;
   if (renderUserName.innerHTML === '') {
     renderUserName.innerHTML = 'Jeanne Baret';
