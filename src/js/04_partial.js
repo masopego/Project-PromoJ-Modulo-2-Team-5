@@ -1,86 +1,71 @@
-const username = query('#name');
-const userjob = query('#job');
-//const userimage = query('#image');
-const useremail = query('#email');
-const userphone = query('#phone');
-const userlinkedin = query('#linkedin');
-const usergithub = query('#github');
-
 function validationUserName() {
-  if (username.value === '') {
-    username.classList.add('js-border-input');
-    username.parentElement.classList.add('js-error');
+  if (userName.value === '') {
+    userName.classList.add('js-border-input');
+    userName.parentElement.classList.add('js-error');
   } else {
-    username.classList.remove('js-border-input');
-    username.parentElement.classList.remove('js-error');
+    userName.classList.remove('js-border-input');
+    userName.parentElement.classList.remove('js-error');
   }
 }
 
 function validationJob() {
-  if (userjob.value === '') {
-    userjob.classList.add('js-border-input');
-    userjob.parentElement.classList.add('js-error');
+  if (userJob.value === '') {
+    userJob.classList.add('js-border-input');
+    userJob.parentElement.classList.add('js-error');
   } else {
-    userjob.classList.remove('js-border-input');
-    userjob.parentElement.classList.remove('js-error');
+    userJob.classList.remove('js-border-input');
+    userJob.parentElement.classList.remove('js-error');
   }
 }
 
-// /*if (userimage.value === '') {
-//   userimage.classList.add('js-border-input');
-// } else {
-//   userimage.classList.remove('js-border-input');
-// }*/
-
 function validationEmail() {
-  if (useremail.value === '' || !validateEmail(useremail.value)) {
-    //!useremail.value.includes('@')
-    useremail.classList.add('js-border-input');
-    useremail.parentElement.classList.add('js-error');
+  if (userEmail.value === '' || !validateEmail(userEmail.value)) {
+    userEmail.classList.add('js-border-input');
+    userEmail.parentElement.classList.add('js-error');
     /*to deactivate icon in preview card */
     renderUserEmail.classList.add('js-icon-deactivated');
   } else {
-    useremail.classList.remove('js-border-input');
-    useremail.parentElement.classList.remove('js-error');
+    userEmail.classList.remove('js-border-input');
+    userEmail.parentElement.classList.remove('js-error');
     renderUserEmail.classList.remove('js-icon-deactivated');
   }
 }
 
 function validationPhone() {
-  if (userphone.value === '' || !validatePhone(userphone.value)) {
-    userphone.classList.add('js-border-input');
-    userphone.parentElement.classList.add('js-error');
+  if (userPhone.value === '' || !validatePhone(userPhone.value)) {
+    userPhone.classList.add('js-border-input');
+    userPhone.parentElement.classList.add('js-error');
     /*to deactivate icon in preview card */
     renderUserPhone.classList.add('js-icon-deactivated');
   } else {
-    userphone.classList.remove('js-border-input');
-    userphone.parentElement.classList.remove('js-error');
+    userPhone.classList.remove('js-border-input');
+    userPhone.parentElement.classList.remove('js-error');
     renderUserPhone.classList.remove('js-icon-deactivated');
   }
 }
 
 function validationLinkedin() {
-  if (userlinkedin.value === '') {
-    userlinkedin.classList.add('js-border-input');
-    userlinkedin.parentElement.classList.add('js-error');
+  if (userLinkedin.value === '') {
+    userLinkedin.classList.add('js-border-input');
+    userLinkedin.parentElement.classList.add('js-error');
     /*to deactivate icon in preview card */
     renderUserLinkedin.classList.add('js-icon-deactivated');
   } else {
-    userlinkedin.classList.remove('js-border-input');
-    userlinkedin.parentElement.classList.remove('js-error');
+    userLinkedin.classList.remove('js-border-input');
+    userLinkedin.parentElement.classList.remove('js-error');
     renderUserLinkedin.classList.remove('js-icon-deactivated');
   }
 }
 
 function validationGithub() {
-  if (usergithub.value === '') {
-    usergithub.classList.add('js-border-input');
-    usergithub.parentElement.classList.add('js-error');
+  if (userGithub.value === '') {
+    userGithub.classList.add('js-border-input');
+    userGithub.parentElement.classList.add('js-error');
     /*to deactivate icon in preview card */
     renderUserGithub.classList.add('js-icon-deactivated');
   } else {
-    usergithub.classList.remove('js-border-input');
-    usergithub.parentElement.classList.remove('js-error');
+    userGithub.classList.remove('js-border-input');
+    userGithub.parentElement.classList.remove('js-error');
     renderUserGithub.classList.remove('js-icon-deactivated');
   }
 }
@@ -95,13 +80,12 @@ function validatePhone(phone) {
   return ph.test(phone);
 }
 
-username.addEventListener('keyup', validationUserName);
-userjob.addEventListener('keyup', validationJob);
-//userimage.addEventListener('change', validationUserName);
-useremail.addEventListener('keyup', validationEmail);
-userphone.addEventListener('keyup', validationPhone);
-userlinkedin.addEventListener('keyup', validationLinkedin);
-usergithub.addEventListener('keyup', validationGithub);
+userName.addEventListener('keyup', validationUserName);
+userJob.addEventListener('keyup', validationJob);
+userEmail.addEventListener('keyup', validationEmail);
+userPhone.addEventListener('keyup', validationPhone);
+userLinkedin.addEventListener('keyup', validationLinkedin);
+userGithub.addEventListener('keyup', validationGithub);
 
 /*función para activar el aviso de campos vacíos al formulario cuando se clica en la sección comparte */
 const shareClick = document.querySelector('.form__share');
@@ -116,7 +100,3 @@ function emptyFieldValidator() {
 }
 
 shareClick.addEventListener('click', emptyFieldValidator);
-<<<<<<< HEAD
-
-=======
->>>>>>> master

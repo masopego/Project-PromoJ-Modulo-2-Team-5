@@ -1,9 +1,6 @@
 .app__main {
-  // background-color: linear-gradient($color-neutral, $color-light);
+
   background-image: url('../images/Background-prueba2.png');
-  /*@include tablet {
-    height: calc(100vh - 170px);
-  }*/
   .wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);

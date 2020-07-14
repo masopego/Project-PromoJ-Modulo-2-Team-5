@@ -66,7 +66,6 @@ function changeToWarm() {
 
   formData.palette = '2';
 
-  // console.log(formData);
   localStorage.setItem('color', JSON.stringify(formData.palette));
 }
 

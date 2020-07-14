@@ -16,7 +16,7 @@ const renderUserPhone = query('.js-phonePreview');
 const renderUserLinkedin = query('.js-linkedinPreview');
 const renderUserGithub = query('.js-githubPreview');
 
-const userData = {}; //llenaria la funcion vacía con los datos
+// const userData = {}; //llenaria la funcion vacía con los datos
 
 //llama a los datos guardados en el localstorage
 const getFromLocalStorage = () => {
@@ -43,12 +43,12 @@ getFromLocalStorage();
 //fin de ejecución del local storage
 
 function getInputValues() {
-  userData.name = userName.value; //llamas al objeto.nombredelapropiedadsilasabes(si no la sabes con corchetes)
-  userData.job = userJob.value;
-  userData.email = userEmail.value;
-  userData.phone = userPhone.value;
-  userData.linkedin = userLinkedin.value;
-  userData.github = userGithub.value;
+  formData.name = userName.value; //llamas al objeto.nombredelapropiedadsilasabes(si no la sabes con corchetes)
+  formData.job = userJob.value;
+  formData.email = userEmail.value;
+  formData.phone = userPhone.value;
+  formData.linkedin = userLinkedin.value;
+  formData.github = userGithub.value;
 }
 
 function renderUserInfo(data) {
@@ -68,8 +68,8 @@ function renderUserInfo(data) {
 
 function updateInputHandler() {
   getInputValues();
-  renderUserInfo(userData);
-  localStorage.setItem('data', JSON.stringify(userData)); //añadí esto para que se guarden los datos en local
+  renderUserInfo(formData);
+  localStorage.setItem('data', JSON.stringify(formData)); //añadí esto para que se guarden los datos en local
 }
 
 //asigna los valores para que se guarden el local storage
