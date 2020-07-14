@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 let isValid = false;
 
 // const allInputs = formInputs.concat(paletteInputs);
@@ -25,6 +26,9 @@ paletteInputs.forEach((element) => {
 });
 
 function changeElement(event) {
+  if (submitButton.hasAttribute('disabled')) {
+    resetTwitter();
+  }
   validatePalette();
   getValuesFromForm();
   validateForm();
@@ -93,11 +97,9 @@ submitButton.addEventListener('click', function (event) {
       console.error(error);
     });
 });
-
+const btn = document.querySelector('.twitterdiv');
 function showURL(result) {
   const responseURL = document.querySelector('.form__share__text__p');
-
-  const btn = document.querySelector('.twitterdiv');
 
   if (result.success) {
     textError.classList.remove('js-hidden');
@@ -118,3 +120,12 @@ changeElement();
 
 const createCard = document.querySelector('.form__share__submit');
 createCard.addEventListener('click', showURL);
+
+function resetTwitter() {
+  btn.classList.add('js-hidden');
+  const responseURL = document.querySelector('.form__share__text__p');
+  responseURL.innerHTML = `<p class="form__share__text__p">
+            ¡La tarjeta todavía no está lista para ser compartida!
+            <span>Por favor, revisa los campos rellenos más arriba 🌱 </span>
+          </p>`;
+}

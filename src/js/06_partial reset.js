@@ -1,4 +1,3 @@
-
 // reset
 
 const resetElement = query('.button__reset');
@@ -7,6 +6,7 @@ const paletteDefault = query('#cold');
 // función para poner todos las tareas a no completadas
 // esta función debe modificar los datos y después pintar y escuchar eventos
 function reset(ev) {
+  resetTwitter();
   // prevengo la acción por defecto
   ev.preventDefault();
   // recorro todas las tareas
