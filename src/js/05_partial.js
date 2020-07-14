@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 let isValid = false;
 
 // const allInputs = formInputs.concat(paletteInputs);
@@ -25,6 +26,9 @@ paletteInputs.forEach((element) => {
 });
 
 function changeElement(event) {
+  if (submitButton.hasAttribute('disabled')) {
+    resetTwitter();
+  }
   validatePalette();
   getValuesFromForm();
   validateForm();
@@ -33,7 +37,7 @@ function changeElement(event) {
     submitButton.removeAttribute('disabled');
     textError.classList.add('js-hidden');
   } else {
-    submitButton.setAttribute('disabled', 1);
+    submitButton.setAttribute('disabled', '');
     textError.classList.remove('js-hidden');
   }
 }
@@ -93,22 +97,21 @@ submitButton.addEventListener('click', function (event) {
       console.error(error);
     });
 });
-
+const btn = document.querySelector('.twitterdiv');
 function showURL(result) {
   const responseURL = document.querySelector('.form__share__text__p');
-
-  const btn = document.querySelector('.twitterdiv');
 
   if (result.success) {
     textError.classList.remove('js-hidden');
     btn.classList.remove('js-hidden');
     const textCard =
-      'Echa un vistazo a mi tarjeta de visita, hecha con "Botanical Profile Cards" 🌱 ';
-    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span>${result.cardURL}<a href="${result.cardURL}" target="_blank" ></a>`;
+      'Echa un vistazo a mi tarjeta de visita, hecha con %23BotanicalProfileCards" 🌱 ';
+    responseURL.innerHTML = `<span>🌱La tarjeta ha sido creada:</span><a href="${result.cardURL}" target="_blank" >${result.cardURL}</a>`;
     const twitterLink = document.querySelector('.twitter--link');
+    submitButton.setAttribute('disabled', '');
     twitterLink.setAttribute(
       'href',
-      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}`
+      `https://twitter.com/intent/tweet?text=${textCard}&url=${result.cardURL}&hashtags=Adalabers,JavaScript,PromoJemison,week7of12`
     );
   }
 }
@@ -117,3 +120,12 @@ changeElement();
 
 const createCard = document.querySelector('.form__share__submit');
 createCard.addEventListener('click', showURL);
+
+function resetTwitter() {
+  btn.classList.add('js-hidden');
+  const responseURL = document.querySelector('.form__share__text__p');
+  responseURL.innerHTML = `<p class="form__share__text__p">
+            ¡La tarjeta todavía no está lista para ser compartida!
+            <span>Por favor, revisa los campos rellenos más arriba 🌱 </span>
+          </p>`;
+}
